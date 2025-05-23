@@ -1,0 +1,160 @@
+<script type="text/javascript">
+        var gk_isXlsx = false;
+        var gk_xlsxFileLookup = {};
+        var gk_fileData = {};
+        function filledCell(cell) {
+          return cell !== '' && cell != null;
+        }
+        function loadFileData(filename) {
+        if (gk_isXlsx && gk_xlsxFileLookup[filename]) {
+            try {
+                var workbook = XLSX.read(gk_fileData[filename], { type: 'base64' });
+                var firstSheetName = workbook.SheetNames[0];
+                var worksheet = workbook.Sheets[firstSheetName];
+
+                // Convert sheet to JSON to filter blank rows
+                var jsonData = XLSX.utils.sheet_to_json(worksheet, { header: 1, blankrows: false, defval: '' });
+                // Filter out blank rows (rows where all cells are empty, null, or undefined)
+                var filteredData = jsonData.filter(row => row.some(filledCell));
+
+                // Heuristic to find the header row by ignoring rows with fewer filled cells than the next row
+                var headerRowIndex = filteredData.findIndex((row, index) =>
+                  row.filter(filledCell).length >= filteredData[index + 1]?.filter(filledCell).length
+                );
+                // Fallback
+                if (headerRowIndex === -1 || headerRowIndex > 25) {
+                  headerRowIndex = 0;
+                }
+
+                // Convert filtered JSON back to CSV
+                var csv = XLSX.utils.aoa_to_sheet(filteredData.slice(headerRowIndex)); // Create a new sheet from filtered array of arrays
+                csv = XLSX.utils.sheet_to_csv(csv, { header: 1 });
+                return csv;
+            } catch (e) {
+                console.error(e);
+                return "";
+            }
+        }
+        return gk_fileData[filename] || "";
+        }
+        </script><!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Professional portfolio of J. Gregory Walsh, showcasing expertise in behavioral assessment, crisis management, and analytics for law enforcement and private sector roles.">
+    <meta name="keywords" content="law enforcement, mental health, crisis management, data analysis, federal law enforcement, public safety">
+    <meta name="author" content="J. Gregory Walsh">
+    <title>J. Gregory Walsh | Behavioral Insight for Law Enforcement and Beyond</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="bg-gray-100 font-sans">
+    <!-- Skip to content link for accessibility -->
+    <a href="#main-content" class="sr-only focus:not-sr-only absolute top-0 left-0 bg-blue-600 text-white p-2">Skip to content</a>
+
+    <!-- Header -->
+    <header class="bg-blue-800 text-white sticky top-0 z-50 shadow-md">
+        <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+            <h1 class="text-2xl font-bold">J. Gregory Walsh</h1>
+            <nav class="hidden md:flex space-x-6">
+                <a href="index.html" class="hover:text-blue-300">Home</a>
+                <a href="about.html" class="hover:text-blue-300">About</a>
+                <a href="experience.html" class="hover:text-blue-300">Experience</a>
+                <a href="projects.html" class="hover:text-blue-300">Projects</a>
+                <a href="contact.html" class="hover:text-blue-300">Contact</a>
+            </nav>
+            <!-- Mobile Menu Toggle -->
+            <button id="mobile-menu-toggle" class="md:hidden focus:outline-none" aria-label="Toggle menu">
+                <i class="fas fa-bars text-2xl"></i>
+            </button>
+        </div>
+        <!-- Mobile Menu -->
+        <nav id="mobile-menu" class="hidden md:hidden bg-blue-700">
+            <a href="index.html" class="block px-4 py-2 hover:bg-blue-600">Home</a>
+            <a href="about.html" class="block px-4 py-2 hover:bg-blue-600">About</a>
+            <a href="experience.html" class="block px-4 py-2 hover:bg-blue-600">Experience</a>
+            <a href="projects.html" class="block px-4 py-2 hover:bg-blue-600">Projects</a>
+            <a href="contact.html" class="block px-4 py-2 hover:bg-blue-600">Contact</a>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main id="main-content" class="container mx-auto px-4 py-12">
+        <!-- Hero Section -->
+        <section class="text-center mb-12">
+            <h2 class="text-4xl font-bold text-gray-800 mb-4">Behavioral Insight for Law Enforcement and Beyond</h2>
+            <p class="text-lg text-gray-600 max-w-2xl mx-auto">
+                Transitioning from mental health expertise to law enforcement, I bring skills in crisis management, behavioral assessment, and data analysis to enhance public safety and organizational success.
+            </p>
+            <a href="resume.pdf" download class="mt-6 inline-block bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition">Download Résumé</a>
+        </section>
+
+        <!-- Key Skills -->
+        <section class="mb-12">
+            <h3 class="text-2xl font-semibold text-gray-800 mb-6 text-center">Key Skills</h3>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <h4 class="text-xl font-medium text-blue-800 mb-2">Crisis Management</h4>
+                    <p class="text-gray-600">Proven ability to de-escalate high-risk situations and manage crises under pressure, honed in acute psychiatric care settings.</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <h4 class="text-xl font-medium text-blue-800 mb-2">Behavioral Assessment</h4>
+                    <p class="text-gray-600">Expertise in analyzing behavior and motivations, applying psychological insights to support law enforcement and organizational goals.</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <h4 class="text-xl font-medium text-blue-800 mb-2">Data Analysis</h4>
+                    <p class="text-gray-600">Skilled in statistical modeling and data visualization to inform decision-making in public safety and business contexts.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Call to Action -->
+        <section class="text-center bg-blue-100 py-12 rounded-lg">
+            <h3 class="text-2xl font-semibold text-gray-800 mb-4">Ready to Contribute</h3>
+            <p class="text-lg text-gray-600 max-w-xl mx-auto mb-6">
+                Explore my experience and projects to see how I can add value to your team in law enforcement or the private sector.
+            </p>
+            <a href="experience.html" class="inline-block bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition">View Experience</a>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-8">
+        <div class="container mx-auto px-4 text-center">
+            <p class="mb-4">&copy; 2025 J. Gregory Walsh. All rights reserved.</p>
+            <div class="flex justify-center space-x-6">
+                <a href="https://linkedin.com/in/jgregorywalsh" target="_blank" rel="noopener" class="hover:text-blue-300" aria-label="LinkedIn">
+                    <i class="fab fa-linkedin text-2xl"></i>
+                </a>
+                <a href="https://github.com/jgregorywalsh" target="_blank" rel="noopener" class="hover:text-blue-300" aria-label="GitHub">
+                    <i class="fab fa-github text-2xl"></i>
+                </a>
+                <a href="https://researchgate.net/profile/J-Gregory-Walsh" target="_blank" rel="noopener" class="hover:text-blue-300" aria-label="ResearchGate">
+                    <i class="fab fa-researchgate text-2xl"></i>
+                </a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript for Mobile Menu -->
+    <script>
+        const mobileMenuToggle = document.getElementById('mobile-menu-toggle');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        mobileMenuToggle.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+            const isExpanded = mobileMenu.classList.contains('hidden') ? 'false' : 'true';
+            mobileMenuToggle.setAttribute('aria-expanded', isExpanded);
+        });
+
+        // Close mobile menu when a link is clicked
+        mobileMenu.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+                mobileMenuToggle.setAttribute('aria-expanded', 'false');
+            });
+        });
+    </script>
+</body>
+</html>
