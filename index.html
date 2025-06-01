@@ -16,13 +16,28 @@
                 <div class="flex items-center">
                     <a href="#home" class="text-2xl font-bold">J. Gregory Walsh</a>
                 </div>
-                <div class="flex items-center space-x-4">
+                <!-- Desktop Menu -->
+                <div class="hidden sm:flex items-center space-x-4">
                     <a href="#about" class="hover:text-gold-400 transition">About</a>
                     <a href="#skills" class="hover:text-gold-400 transition">Skills</a>
                     <a href="#experience" class="hover:text-gold-400 transition">Experience</a>
                     <a href="#projects" class="hover:text-gold-400 transition">Projects</a>
                     <a href="#contact" class="hover:text-gold-400 transition">Contact</a>
                 </div>
+                <!-- Mobile Menu Button -->
+                <div class="flex items-center sm:hidden">
+                    <button id="mobile-menu-button" class="text-white hover:text-gold-400 focus:outline-none" aria-label="Toggle mobile menu" aria-expanded="false">
+                        <i class="fas fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+            <!-- Mobile Menu -->
+            <div id="mobile-menu" class="hidden sm:hidden flex-col space-y-4 bg-navy-900 py-4 px-4">
+                <a href="#about" class="block text-white hover:text-gold-400 transition">About</a>
+                <a href="#skills" class="block text-white hover:text-gold-400 transition">Skills</a>
+                <a href="#experience" class="block text-white hover:text-gold-400 transition">Experience</a>
+                <a href="#projects" class="block text-white hover:text-gold-400 transition">Projects</a>
+                <a href="#contact" class="block text-white hover:text-gold-400 transition">Contact</a>
             </div>
         </div>
     </nav>
@@ -198,15 +213,29 @@
         </div>
     </footer>
 
-    <!-- Smooth Scrolling Script -->
+    <!-- Smooth Scrolling and Mobile Menu Toggle Script -->
     <script>
+        // Smooth Scrolling
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function(e) {
                 e.preventDefault();
                 document.querySelector(this.getAttribute('href')).scrollIntoView({
                     behavior: 'smooth'
                 });
+                // Close mobile menu after clicking a link
+                const mobileMenu = document.getElementById('mobile-menu');
+                mobileMenu.classList.add('hidden');
+                const button = document.getElementById('mobile-menu-button');
+                button.setAttribute('aria-expanded', 'false');
             });
+        });
+
+        // Mobile Menu Toggle
+        document.getElementById('mobile-menu-button').addEventListener('click', function() {
+            const mobileMenu = document.getElementById('mobile-menu');
+            const isExpanded = this.getAttribute('aria-expanded') === 'true';
+            mobileMenu.classList.toggle('hidden');
+            this.setAttribute('aria-expanded', !isExpanded);
         });
     </script>
 
