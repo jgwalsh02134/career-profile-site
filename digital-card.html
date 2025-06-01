@@ -8,7 +8,7 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
 </head>
-<body class="bg-gray-100 font-sans">
+<body class="bg-gray-100 font-sans min-h-screen flex flex-col">
     <!-- Navigation -->
     <nav class="bg-navy-900 text-white sticky top-0 z-50 shadow-md">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -45,9 +45,9 @@
     </nav>
 
     <!-- Digital Card Section -->
-    <section id="digital-card" class="py-16">
+    <section id="digital-card" class="py-8 flex-grow">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 class="text-3xl font-bold text-navy-900 mb-8 text-center">Digital Card</h2>
+            <h2 class="text-3xl font-bold text-navy-900 mb-4 text-center">Digital Card</h2>
             <div class="max-w-md mx-auto bg-white p-6 rounded-lg shadow-md text-center">
                 <h3 class="text-2xl font-semibold text-navy-900 mb-2">J. Gregory Walsh</h3>
                 <p class="text-lg text-gray-700 mb-4">Behavioral Analyst</p>
@@ -60,6 +60,15 @@
                         <i class="fas fa-phone mr-2 text-gold-400"></i>
                         <a href="tel:+16173833745" class="text-gold-400 hover:underline">(617) 383-3745</a>
                     </p>
+                </div>
+                <div class="mt-6">
+                    <a href="/assets/vcard/J. Gregory Walsh.vcf" download class="inline-block bg-navy-900 text-white px-6 py-3 rounded-lg font-semibold hover:bg-navy-800 transition">Download vCard</a>
+                </div>
+                <div class="mt-4">
+                    <a href="digital-card.html">
+                        <img src="/assets/images/digital-card-qr.png" alt="QR Code linking to J. Gregory Walsh's Digital Card" class="mx-auto h-32 w-32">
+                    </a>
+                    <p class="text-sm text-gray-700 mt-2">Scan to view Digital Card</p>
                 </div>
                 <div class="flex flex-wrap justify-center gap-4 mt-6">
                     <a href="https://www.linkedin.com/in/jgregorywalsh" target="_blank">
@@ -74,15 +83,6 @@
                     <a href="mailto:jgwalsh@bu.edu">
                         <img src="https://badgen.net/badge/Email/jgwalsh@bu.edu/cc0000?icon=https://jgwalsh02134.github.io/custom-icons/assets%20/icons%20copy/bu.svg&labelColor=000000" alt="Boston University Email" class="h-8">
                     </a>
-                </div>
-                <div class="mt-6">
-                    <a href="/assets/vcard/J. Gregory Walsh.vcf" download class="inline-block bg-navy-900 text-white px-6 py-3 rounded-lg font-semibold hover:bg-navy-800 transition">Download vCard</a>
-                </div>
-                <div class="mt-6">
-                    <a href="digital-card.html">
-                        <img src="/assets/images/digital-card-qr.png" alt="QR Code linking to J. Gregory Walsh's Digital Card" class="mx-auto h-32 w-32">
-                    </a>
-                    <p class="text-sm text-gray-700 mt-2">Scan to view Digital Card</p>
                 </div>
             </div>
         </div>
