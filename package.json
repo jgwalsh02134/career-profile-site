@@ -21,6 +21,8 @@
   },
   "homepage": "https://github.com/jgwalsh02134/career-profile-site#readme",
   "devDependencies": {
+    "autoprefixer": "^10.4.21",
+    "postcss": "^8.5.4",
     "tailwindcss": "^4.1.8"
   }
 }
