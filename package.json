@@ -18,5 +18,8 @@
   "bugs": {
     "url": "https://github.com/jgwalsh02134/career-profile-site/issues"
   },
-  "homepage": "https://github.com/jgwalsh02134/career-profile-site#readme"
+  "homepage": "https://github.com/jgwalsh02134/career-profile-site#readme",
+  "dependencies": {
+    "tailwindcss": "^4.1.8"
+  }
 }
