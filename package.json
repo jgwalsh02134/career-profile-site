@@ -1,28 +1,16 @@
-{
-  "name": "career-profile-site",
-  "version": "1.0.0",
-  "description": "[![GitHub Repo](https://img.shields.io/github/stars/jgwalsh02134/career-profile-site?style=social&label=Star)](https://github.com/jgwalsh02134/career-profile-site) [![Cloudflare](https://img.shields.io/badge/CDN-Cloudflare-F38020?logo=cloudflare&logoColor=white)](https://www.cloudflare.com/)",
-  "main": "tailwind.config.js",
-  "scripts": {
-    "build:css": "npx tailwindcss -i assets/css/input.css -o assets/css/styles.css --minify",
-    "watch:css": "npx tailwindcss -i assets/css/input.css -o assets/css/styles.css --watch",
-    "postinstall": "npm run build:css",
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/jgwalsh02134/career-profile-site.git"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/jgwalsh02134/career-profile-site/issues"
-  },
-  "homepage": "https://github.com/jgwalsh02134/career-profile-site#readme",
-  "devDependencies": {
-    "autoprefixer": "^10.4.21",
-    "postcss": "^8.5.4",
-    "tailwindcss": "^4.1.8"
-  }
-}
+<file name=index.html path=/Users/j.gregorywalsh/Documents/GitHub/career-profile-site>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Career Profile Site</title>
+  <!-- Tailwind CDN for instant styling -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+  <!-- Content goes here -->
+</body>
+</html>
+</file>
