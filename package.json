@@ -4,8 +4,8 @@
   "description": "[![GitHub Repo](https://img.shields.io/github/stars/jgwalsh02134/career-profile-site?style=social&label=Star)](https://github.com/jgwalsh02134/career-profile-site) [![Cloudflare](https://img.shields.io/badge/CDN-Cloudflare-F38020?logo=cloudflare&logoColor=white)](https://www.cloudflare.com/)",
   "main": "tailwind.config.js",
   "scripts": {
-    "build:css": "tailwindcss -i assets/css/input.css -o assets/css/styles.css --minify",
-    "watch:css": "tailwindcss -i assets/css/input.css -o assets/css/styles.css --watch",
+    "build:css": "npx tailwindcss -i assets/css/input.css -o assets/css/styles.css --minify",
+    "watch:css": "npx tailwindcss -i assets/css/input.css -o assets/css/styles.css --watch",
     "postinstall": "npm run build:css",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
