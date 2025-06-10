@@ -6,6 +6,7 @@
   "scripts": {
     "build:css": "tailwindcss -i assets/css/input.css -o assets/css/styles.css --minify",
     "watch:css": "tailwindcss -i assets/css/input.css -o assets/css/styles.css --watch",
+    "postinstall": "npm run build:css",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -19,7 +20,7 @@
     "url": "https://github.com/jgwalsh02134/career-profile-site/issues"
   },
   "homepage": "https://github.com/jgwalsh02134/career-profile-site#readme",
-  "dependencies": {
+  "devDependencies": {
     "tailwindcss": "^4.1.8"
   }
 }
