@@ -1,0 +1,12 @@
+name = "career-profile-site"
+compatibility_date = "2025-06-11"
+
+[build]
+upload.format = "modules"
+modules = [{ type = "ESModule", path = "./worker/index.js" }]
+
+[site]
+bucket = "./"
+
+[triggers]
+routes = ["career-profile-site.pages.dev/*", "jgwalsh.com/*"]
