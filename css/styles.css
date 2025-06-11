@@ -1,4 +1,6 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-/* your custom @layer blocks below */
+{
+  "scripts": {
+    "existingScript": "someCommand",
+    "build:css": "npx tailwindcss -i ./css/styles.css -o ./styles.css --minify"
+  }
+}
