@@ -1,3 +1,5 @@
 name = "career-profile-worker"
 main = "worker/index.js"
 compatibility_date = "2025-06-11"
+
+routes = ["https://career-profile-site.pages.dev/*"]
