@@ -1,4 +1,9 @@
 {
+  "name": "career-profile-site",
+  "version": "1.0.0",
+  "scripts": {
+    "build:css": "npx tailwindcss -i ./css/styles.css -o ./styles.css --minify"
+  },
   "devDependencies": {
     "@cloudflare/vitest-pool-workers": "^0.8.37",
     "vitest": "~3.1.0"
