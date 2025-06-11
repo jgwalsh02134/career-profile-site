@@ -5,6 +5,10 @@
 
 Welcome to the career profile site for **J. Gregory Walsh**, a behavioral analyst and crisis management specialist transitioning from mental health care to a career in law enforcement, federal agencies, or private sector security and analysis.
 
+## Website
+
+Visit the live site at: [https://jgwalsh.com](https://jgwalsh.com)
+
 ## Overview
 
 This site presents J. Gregory Walsh’s professional background, mission, core competencies, and contact information. It is intended as a digital profile and quick-reference resource for employers, recruiters, and professional contacts.
