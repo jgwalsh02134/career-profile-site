@@ -1,14 +1,14 @@
 export default {
   async fetch(request) {
     const url = new URL(request.url);
-    const path = url.pathname.replace(/\/+$/, "");
+    const path = url.pathname.replace(/\/+$/, "").toLowerCase();
 
-    // Redirect "/resume" to "/resume.html"
+    // ✅ Redirect /resume to /resume.html
     if (path === "/resume") {
       return Response.redirect(`${url.origin}/resume.html`, 301);
     }
 
-    // Proxy original request and add security headers
+    // ✅ Pass through request and add headers
     const response = await fetch(request);
     const headers = new Headers(response.headers);
     headers.set("Content-Security-Policy", "default-src 'self'");
