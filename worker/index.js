@@ -2,10 +2,12 @@ export default {
     async fetch(request) {
       const url = new URL(request.url);
   
-      // Redirect `/resume` → `/resume.html`
-      if (url.pathname === "/resume") {
-        url.pathname = "/resume.html";
-        return Response.redirect(url.toString(), 301);
+      // Normalize path (no trailing slash, case-sensitive)
+      const cleanPath = url.pathname.replace(/\/+$/, "");
+  
+      // Redirect /resume to /resume.html
+      if (cleanPath === "/resume") {
+        return Response.redirect(`${url.origin}/resume.html`, 301);
       }
   
       // Add security headers to all responses
@@ -17,7 +19,6 @@ export default {
   
       return new Response(response.body, {
         status: response.status,
-        statusText: response.statusText,
         headers,
       });
     },
