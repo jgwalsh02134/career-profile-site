@@ -73,35 +73,41 @@
 <body class="bg-gray-100 dark:bg-gray-900 font-sans overflow-x-hidden">
     <a href="#main-content" class="sr-only focus:not-sr-only bg-navy-900 text-white p-2 rounded absolute -top-12 focus:top-4 transition-all duration-300">Skip to content</a>
 
-    <header class="bg-navy-900 text-white shadow-md sticky top-0 z-50">
-        <div class="max-w-7xl mx-auto flex justify-between items-center h-20 px-4 lg:px-8">
-            <a href="#home" class="text-2xl lg:text-3xl font-heading font-bold">J. Gregory Walsh</a>
-            <nav class="hidden md:flex space-x-6 text-sm font-medium" aria-label="Site navigation">
-                <a href="#about" class="hover:text-gold-400 transition nav-link link-hover">Mission</a>
-                <a href="#skills" class="hover:text-gold-400 transition nav-link link-hover">Competencies</a>
-                <a href="#experience" class="hover:text-gold-400 transition nav-link link-hover">Experience</a>
-                <a href="#contact" class="hover:text-gold-400 transition nav-link link-hover">Connect</a>
-                <a href="digital-card.html" class="hover:text-gold-400 transition nav-link link-hover">Reference</a>
+    <header class="bg-navy-900 text-white sticky top-0 z-50 shadow-md border-b border-navy-800">
+        <div class="container mx-auto flex justify-between items-center px-4 py-4 lg:px-6">
+            <!-- Site Title -->
+            <a href="#home" class="text-xl md:text-2xl font-heading font-bold tracking-tight text-gold-400 hover:text-gold-500 transition">
+                J. Gregory Walsh
+            </a>
+
+            <!-- Desktop Nav -->
+            <nav class="hidden lg:flex items-center space-x-6 text-sm uppercase tracking-wide font-medium" aria-label="Site navigation">
+                <a href="#about" class="hover:text-gold-400 nav-link">Mission</a>
+                <a href="#skills" class="hover:text-gold-400 nav-link">Competencies</a>
+                <a href="#experience" class="hover:text-gold-400 nav-link">Experience</a>
+                <a href="#contact" class="hover:text-gold-400 nav-link">Contact</a>
+                <a href="digital-card.html" class="hover:text-gold-400">Quick Ref</a>
+                <button id="dark-mode-toggle" aria-label="Toggle dark mode" class="ml-2 hover:text-gold-400 focus:outline-none">
+                    <i class="fas fa-moon text-lg"></i>
+                </button>
             </nav>
-            <div class="flex items-center gap-4">
-                <button id="dark-mode-toggle" aria-label="Toggle dark mode" class="text-white hover:text-gold-400 focus:outline-none">
-                    <i class="fas fa-moon text-xl"></i>
-                </button>
-                <button id="mobile-menu-button" aria-label="Toggle menu" class="md:hidden">
-                    <i class="fas fa-bars text-xl"></i>
-                </button>
-            </div>
+
+            <!-- Mobile Nav Button -->
+            <button id="mobile-menu-button" aria-label="Toggle mobile menu" aria-expanded="false"
+                class="lg:hidden text-white hover:text-gold-400 focus:outline-none focus:ring-2 focus:ring-gold-400">
+                <i class="fas fa-bars text-2xl"></i>
+            </button>
         </div>
 
-        <!-- Mobile Menu -->
-        <div id="mobile-menu" class="md:hidden hidden bg-navy-900 border-t border-gray-700 px-4 py-4 space-y-3" role="navigation">
-            <a href="#about" class="block text-white hover:text-gold-400 nav-link link-hover">Mission</a>
-            <a href="#skills" class="block text-white hover:text-gold-400 nav-link link-hover">Competencies</a>
-            <a href="#experience" class="block text-white hover:text-gold-400 nav-link link-hover">Experience</a>
-            <a href="#contact" class="block text-white hover:text-gold-400 nav-link link-hover">Connect</a>
-            <a href="digital-card.html" class="block text-white hover:text-gold-400 nav-link link-hover">Reference</a>
-            <button id="mobile-dark-mode-toggle" class="text-left text-white hover:text-gold-400 mt-2">
-                <i class="fas fa-moon mr-2"></i>Toggle Dark Mode
+        <!-- Mobile Dropdown -->
+        <div id="mobile-menu" class="lg:hidden hidden flex-col gap-4 bg-navy-900 px-6 pb-6 text-sm font-medium tracking-wide" role="navigation">
+            <a href="#about" class="hover:text-gold-400 block nav-link pt-4">Mission</a>
+            <a href="#skills" class="hover:text-gold-400 block nav-link">Competencies</a>
+            <a href="#experience" class="hover:text-gold-400 block nav-link">Experience</a>
+            <a href="#contact" class="hover:text-gold-400 block nav-link">Contact</a>
+            <a href="digital-card.html" class="hover:text-gold-400 block">Quick Ref</a>
+            <button id="mobile-dark-mode-toggle" class="text-left hover:text-gold-400 mt-4" aria-label="Toggle dark mode">
+                <i class="fas fa-moon mr-2"></i> Toggle Dark Mode
             </button>
         </div>
     </header>
