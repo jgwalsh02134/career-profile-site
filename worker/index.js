@@ -3,12 +3,15 @@ export default {
     const url = new URL(request.url);
     const path = url.pathname.replace(/\/+$/, "").toLowerCase();
 
+    // DEBUG LOG
+    console.log("Path:", path);
+
     // ✅ Redirect /resume to /resume.html
     if (path === "/resume") {
       return Response.redirect(`${url.origin}/resume.html`, 301);
     }
 
-    // ✅ Pass through request and add headers
+    // Fetch and forward original response
     const response = await fetch(request);
     const headers = new Headers(response.headers);
     headers.set("Content-Security-Policy", "default-src 'self'");
