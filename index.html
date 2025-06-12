@@ -236,7 +236,7 @@
                     <a href="https://github.com/jgwalsh02134" target="_blank" rel="noopener" aria-label="Visit GitHub Profile" class="text-gold-400 dark:text-white hover:text-gold-500 transition">
                         <picture>
                             <source media="(prefers-color-scheme: dark)" srcset="/assets/icons/github.svg">
-                            <img src="/assets/icons/github.svg" alt="GitHub Icon" class="h-16 w-16" loading="lazy">
+                            <img src="/assets/icons/github copy.svg" alt="GitHub Icon" class="h-16 w-16" loading="lazy">
                         </picture>
                     </a>
                     <a href="https://www.usajobs.gov/applicant/profile/" target="_blank" rel="noopener" aria-label="Visit USAJobs Profile" class="text-gold-400 dark:text-white hover:text-gold-500 transition">
@@ -264,7 +264,7 @@
                         </picture>
                     </a>
                     <a href="mailto:jgwalsh@bu.edu" aria-label="Email via Boston University" class="text-gold-400 dark:text-white hover:text-gold-500 transition">
-                        <img src="/assets/icons/bu-logo.svg" alt="Boston University Icon" class="h-16 w-16" loading="lazy">
+                        <img src="/assets/icons/bu.svg" alt="Boston University Icon" class="h-16 w-16" loading="lazy">
                     </a>
                     <a href="https://saintsnetwork.siena.edu/profile/gregwalsh/" target="_blank" rel="noopener" aria-label="Visit Siena College Alumni Profile" class="text-gold-400 dark:text-white hover:text-gold-500 transition">
                         <img src="/assets/icons/SIENa-S.svg" alt="Siena College Icon" class="h-16 w-16" loading="lazy">
@@ -413,6 +413,42 @@
                 },
             },
         };
+    </script>
+
+    <!-- Chart.js Script for Profile Distribution Pie Chart -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script>
+        const ctx = document.getElementById('profileDistributionChart').getContext('2d');
+        const profileDistributionChart = new Chart(ctx, {
+            type: 'pie',
+            data: {
+                labels: ['Professional Profiles', 'Academic & Institutional'],
+                datasets: [{
+                    data: [4, 5], // 4 professional (LinkedIn, GitHub, USAJobs, ResearchGate), 5 academic (ORCID, Academia, BU, Siena, ProtonMail)
+                    backgroundColor: ['#F4A261', '#1B263B'],
+                    borderColor: ['#FFFFFF'],
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                responsive: true,
+                plugins: {
+                    legend: {
+                        position: 'top',
+                        labels: {
+                            color: '#1B263B',
+                            font: { size: 14 }
+                        }
+                    },
+                    title: {
+                        display: true,
+                        text: 'Profile Distribution',
+                        color: '#1B263B',
+                        font: { size: 16 }
+                    }
+                }
+            }
+        });
     </script>
 </body>
 </html>
