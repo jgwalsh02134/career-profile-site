@@ -3,7 +3,7 @@ module.exports = {
   darkMode: 'class',
   content: [
     "./*.html",
-    "./**/*.html", // Include all HTML files in subdirectories
+    "./**/*.html"
   ],
   theme: {
     extend: {
@@ -23,8 +23,5 @@ module.exports = {
       },
     },
   },
-  plugins: {
-    tailwindcss: {},
-    autoprefixer: {},
-  },
+  plugins: [],
 }
