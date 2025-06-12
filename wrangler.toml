@@ -1,3 +1,4 @@
 name = "career-profile-worker"
 main = "worker/index.js"
-compatibility_date = "2025-06-11"
+compatibility_date = "2025-06-12"
+type = "javascript"
