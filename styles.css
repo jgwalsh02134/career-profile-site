@@ -1,0 +1,6 @@
+/* styles.css - Tailwind CSS Input */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Optional: Add custom styles here if needed */

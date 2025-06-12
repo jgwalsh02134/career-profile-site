@@ -2,7 +2,8 @@
   "name": "career-profile-site",
   "version": "1.0.0",
   "scripts": {
-    "build:css": "tailwindcss -i ./css/styles.css -o ./styles.css --minify"
+    "build:css": "tailwindcss -i ./css/input.css -o ./styles.css --minify",
+    "watch:css": "tailwindcss -i ./css/input.css -o ./styles.css --watch"
   },
   "devDependencies": {
     "@cloudflare/vitest-pool-workers": "^0.8.37",
