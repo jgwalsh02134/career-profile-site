@@ -2,7 +2,7 @@
   "name": "career-profile-site",
   "version": "1.0.0",
   "scripts": {
-    "build": "node build-css.js"
+    "build": "postcss styles.css -o styles.css --minify"
   },
   "devDependencies": {
     "@cloudflare/vitest-pool-workers": "^0.8.37",
