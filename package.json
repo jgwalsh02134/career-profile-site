@@ -2,12 +2,14 @@
   "name": "career-profile-site",
   "version": "1.0.0",
   "scripts": {
-    "build": "tailwindcss -i ./styles.css -o ./styles.css --minify"
+    "build": "node build-css.js"
   },
   "devDependencies": {
     "@cloudflare/vitest-pool-workers": "^0.8.37",
+    "@tailwindcss/postcss": "^4.1.10",
     "autoprefixer": "^10.4.21",
     "postcss": "^8.5.5",
+    "postcss-cli": "^11.0.1",
     "tailwindcss": "^4.1.10",
     "vitest": "~3.1.0"
   }
