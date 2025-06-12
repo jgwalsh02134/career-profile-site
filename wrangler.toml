@@ -1,3 +1,0 @@
-name = "career-profile-worker"
-main = "worker/index.js"
-compatibility_date = "2025-06-12"
