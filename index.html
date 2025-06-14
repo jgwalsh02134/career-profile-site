@@ -1,453 +1,226 @@
 <!DOCTYPE html>
-<html lang="en" class="dark">
+<html lang="en" class="light">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>J. Gregory Walsh | Behavioral Analyst & Crisis Strategy Expert</title>
-    <meta name="description" content="Translating frontline behavioral expertise into actionable insight for public safety, federal operations, and strategic teams.">
-    <link rel="canonical" href="https://jgwalsh.com/">
-    <meta name="robots" content="index, follow">
-
-    <!-- Open Graph -->
-    <meta property="og:url" content="https://jgwalsh.com/">
-    <meta property="og:type" content="website">
-    <meta property="og:title" content="J. Gregory Walsh | Behavioral Analyst & Crisis Strategy Expert">
-    <meta property="og:description" content="Translating frontline behavioral expertise into actionable insight for public safety, federal operations, and strategic teams.">
-    <meta property="og:image" content="https://jgwalsh.com/assets/images/og-image.jpg">
-
-    <!-- Twitter Card -->
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="J. Gregory Walsh | Behavioral Analyst & Crisis Strategy Expert">
-    <meta name="twitter:description" content="Translating frontline behavioral expertise into actionable insight for public safety, federal operations, and strategic teams.">
-    <meta name="twitter:image" content="https://jgwalsh.com/assets/images/twitter-card.jpg">
-
-    <!-- Preconnect & Preload Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Georgia&family=Inter:wght@400;600&display=swap">
-    <link href="https://fonts.googleapis.com/css2?family=Georgia&family=Inter:wght@400;600&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
-    <noscript>
-        <link href="https://fonts.googleapis.com/css2?family=Georgia&family=Inter:wght@400;600&display=swap" rel="stylesheet">
-    </noscript>
-
-    <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
-
-    <!-- JSON-LD Structured Data -->
-    <script type="application/ld+json">
-    {
-        "@context": "https://schema.org",
-        "@type": "Person",
-        "name": "J. Gregory Walsh",
-        "url": "https://jgwalsh.com",
-        "email": "mailto:jgwalsh@proton.me",
-        "telephone": "+1-617-383-3745",
-        "sameAs": [
-            "https://www.linkedin.com/in/jgregorywalsh",
-            "https://github.com/jgwalsh02134",
-            "https://orcid.org/0000-0002-4420-5724",
-            "https://www.researchgate.net/profile/J-Gregory-Walsh"
-        ]
-    }
-    </script>
-
-    <!-- Screen-reader only utility -->
+    <title>J. Gregory Walsh - Behavioral Science & Crisis Strategy</title>
+    <script src="https://cdn.tailwindcss.com"></script>
     <style>
-        .sr-only {
-            position: absolute;
-            width: 1px;
-            height: 1px;
-            padding: 0;
-            margin: -1px;
-            overflow: hidden;
-            clip: rect(0,0,0,0);
-            white-space: nowrap;
-            border: 0;
+        .dark {
+            background-color: #1f2937;
+            color: #e5e7eb;
+        }
+        .dark a {
+            color: #93c5fd;
+        }
+        .dark .bg-white {
+            background-color: #374151;
+        }
+        .dark .bg-gray-100 {
+            background-color: #1f2937;
+        }
+        .icon {
+            width: 20px;
+            height: 20px;
+            margin-right: 8px;
+            vertical-align: middle;
+        }
+        .dark .icon:not(.dark-specific) {
+            filter: brightness(0) invert(1);
         }
     </style>
-
-    <!-- Local Tailwind CSS -->
-    <link rel="stylesheet" href="/styles.css">
 </head>
-<body class="bg-gray-100 dark:bg-gray-900 font-sans overflow-x-hidden">
-    <a href="#main-content" class="sr-only focus:not-sr-only bg-navy-900 text-white p-2 rounded absolute -top-12 focus:top-4 transition-all duration-300">Skip to content</a>
-
-    <header class="bg-navy-900 text-white sticky top-0 z-50 shadow-md border-b border-navy-800">
-        <div class="container mx-auto flex justify-between items-center px-4 py-4 lg:px-6">
-            <!-- Site Title -->
-            <a href="/" class="text-xl md:text-2xl font-heading font-bold tracking-tight text-gold-400 hover:text-gold-500 transition">
-                J. Gregory Walsh
-            </a>
-
-            <!-- Desktop Nav -->
-            <nav class="hidden lg:flex items-center space-x-6 text-sm uppercase tracking-wide font-medium" aria-label="Site navigation">
-                <a href="#about" class="hover:text-gold-400 nav-link">Mission</a>
-                <a href="#skills" class="hover:text-gold-400 nav-link">Competencies</a>
-                <a href="#experience" class="hover:text-gold-400 nav-link">Experience</a>
-                <a href="#contact" class="hover:text-gold-400 nav-link">Contact</a>
-                <a href="digital-card.html" class="hover:text-gold-400">Quick Ref</a>
-                <button id="dark-mode-toggle" aria-label="Toggle dark mode" class="ml-2 hover:text-gold-400 focus:outline-none">
-                    <i class="fas fa-moon text-lg"></i>
-                </button>
+<body class="font-sans bg-gray-100 text-gray-800 transition-colors duration-300">
+    <!-- Header -->
+    <header class="bg-white shadow-md sticky top-0 z-10">
+        <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+            <h1 class="text-2xl font-bold">J. Gregory Walsh</h1>
+            <nav class="hidden md:flex space-x-6">
+                <a href="#mission" class="hover:text-blue-600">Mission</a>
+                <a href="#competencies" class="hover:text-blue-600">Competencies</a>
+                <a href="#experience" class="hover:text-blue-600">Experience</a>
+                <a href="#contact" class="hover:text-blue-600">Contact</a>
+                <a href="#quick-ref" class="hover:text-blue-600">Quick Ref</a>
             </nav>
-
-            <!-- Mobile Nav Button -->
-            <button id="mobile-menu-button" aria-label="Open mobile menu" aria-expanded="false"
-                class="lg:hidden text-white hover:text-gold-400 focus:outline-none focus:ring-2 focus:ring-gold-400">
-                <i class="fas fa-bars text-2xl"></i>
-            </button>
-        </div>
-
-        <!-- Mobile Dropdown -->
-        <div id="mobile-menu" class="lg:hidden hidden flex-col gap-4 bg-navy-900 px-6 pb-6 text-sm font-medium tracking-wide" role="navigation">
-            <a href="#about" class="hover:text-gold-400 block pt-4">Mission</a>
-            <a href="#skills" class="hover:text-gold-400 block">Competencies</a>
-            <a href="#experience" class="hover:text-gold-400 block">Experience</a>
-            <a href="#contact" class="hover:text-gold-400 block">Contact</a>
-            <a href="digital-card.html" class="hover:text-gold-400 block">Quick Ref</a>
-            <button id="mobile-dark-mode-toggle" class="text-left hover:text-gold-400 mt-4" aria-label="Toggle dark mode">
-                <i class="fas fa-moon mr-2"></i> Toggle Dark Mode
-            </button>
+            <button id="dark-mode-toggle" class="text-sm px-4 py-2 border rounded-lg hover:bg-gray-200">Toggle Dark Mode</button>
         </div>
     </header>
 
-    <main id="main-content">
-        <!-- Hero Section -->
-        <section id="home" class="bg-navy-900 text-white py-20 text-center">
-            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <h1 class="text-4xl md:text-5xl font-bold mb-4 font-heading">J. Gregory Walsh</h1>
-                <p class="text-xl md:text-2xl mb-6 font-body">Behavioral Science | Crisis Strategy | Intelligence-Ready Insight</p>
-                <p class="text-lg max-w-2xl mx-auto mb-8 font-body">
-                    I translate frontline behavioral expertise into actionable insight for public safety, federal operations, and strategic private-sector teams.
-                </p>
-                <a href="/resume.pdf" download class="inline-block bg-navy-900 text-white px-6 py-3 rounded-lg font-semibold hover:bg-navy-800 transition">Download Résumé</a>
-            </div>
-        </section>
+    <!-- Hero Section -->
+    <section class="bg-white py-16 text-center">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold mb-2">J. Gregory Walsh</h2>
+            <p class="text-lg font-semibold text-gray-600 mb-4">Behavioral Science | Crisis Strategy | Intelligence-Ready Insight</p>
+            <p class="text-lg max-w-2xl mx-auto mb-6">I translate frontline behavioral expertise into actionable insight for public safety, federal operations, and strategic private-sector teams.</p>
+            <a href="#" class="bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700">Download Résumé</a>
+        </div>
+    </section>
 
-        <!-- About Section -->
-        <section id="about" class="py-16">
-            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <h2 class="text-3xl font-bold text-navy-900 dark:text-white mb-8 text-center font-heading">Mission & Profile</h2>
-                <div class="flex flex-col md:flex-row items-center gap-8">
-                    <div class="md:w-1/2">
-                        <p class="text-lg text-gray-700 dark:text-gray-300">
-                            With a robust background in mental health care, I am transitioning to a career in law enforcement, focusing on federal agencies while exploring private-sector roles. My expertise lies in understanding human behavior, managing high-stakes situations, and leveraging data-driven decisions.
-                        </p>
-                        <p class="text-lg text-gray-700 dark:text-gray-300 mt-4">
-                            My unique blend of psychological insight, crisis intervention experience, and analytical capabilities positions me to add value in dynamic, high-pressure environments.
-                        </p>
-                    </div>
-                    <div class="md:w-1/2">
-                        <img src="/assets/images/profile.jpg" alt="J. Gregory Walsh portrait" class="rounded-lg shadow-lg w-full" loading="lazy">
-                    </div>
+    <!-- Mission Section -->
+    <section id="mission" class="py-16 bg-gray-100">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-8">Mission & Profile</h2>
+            <div class="max-w-3xl mx-auto space-y-6">
+                <p>With a robust background in mental health care, I am transitioning to a career in law enforcement, focusing on federal agencies while exploring private-sector roles. My expertise lies in understanding human behavior, managing high-stakes situations, and leveraging data-driven decisions.</p>
+                <p>My unique blend of psychological insight, crisis intervention experience, and analytical capabilities positions me to add value in dynamic, high-pressure environments.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Competencies Section -->
+    <section id="competencies" class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-8">Core Competencies</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
+                <div class="bg-gray-100 p-6 rounded-lg shadow-md">
+                    <h3 class="text-xl font-semibold mb-4">Crisis Management</h3>
+                    <p>Proven ability to de-escalate high-risk situations and manage crises under pressure.</p>
+                </div>
+                <div class="bg-gray-100 p-6 rounded-lg shadow-md">
+                    <h3 class="text-xl font-semibold mb-4">Behavioral Assessment</h3>
+                    <p>Expertise in analyzing behavior and motivations to support law enforcement objectives.</p>
+                </div>
+                <div class="bg-gray-100 p-6 rounded-lg shadow-md">
+                    <h3 class="text-xl font-semibold mb-4">Data Analysis</h3>
+                    <p>Skilled in statistical modeling and data visualization to inform strategic decisions.</p>
                 </div>
             </div>
-        </section>
+        </div>
+    </section>
 
-        <!-- Skills Section -->
-        <section id="skills" class="bg-gray-200 dark:bg-gray-800 py-16">
-            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <h2 class="text-3xl font-bold text-navy-900 dark:text-white mb-8 text-center font-heading">Core Competencies</h2>
-                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                    <div class="bg-white dark:bg-gray-700 p-6 rounded-lg shadow-md text-center">
-                        <i class="fas fa-shield-alt text-4xl text-gold-400 mb-4"></i>
-                        <h3 class="text-xl font-semibold text-navy-900 dark:text-white mb-2 font-heading">Crisis Management</h3>
-                        <p class="text-gray-700 dark:text-gray-300">Proven ability to de-escalate high-risk situations and manage crises under pressure.</p>
-                    </div>
-                    <div class="bg-white dark:bg-gray-700 p-6 rounded-lg shadow-md text-center">
-                        <i class="fas fa-brain text-4xl text-gold-400 mb-4"></i>
-                        <h3 class="text-xl font-semibold text-navy-900 dark:text-white mb-2 font-heading">Behavioral Assessment</h3>
-                        <p class="text-gray-700 dark:text-gray-300">Expertise in analyzing behavior and motivations to support law enforcement objectives.</p>
-                    </div>
-                    <div class="bg-white dark:bg-gray-700 p-6 rounded-lg shadow-md text-center">
-                        <i class="fas fa-chart-line text-4xl text-gold-400 mb-4"></i>
-                        <h3 class="text-xl font-semibold text-navy-900 dark:text-white mb-2 font-heading">Data Analysis</h3>
-                        <p class="text-gray-700 dark:text-gray-300">Skilled in statistical modeling and data visualization to inform strategic decisions.</p>
-                    </div>
+    <!-- Experience Section -->
+    <section id="experience" class="py-16 bg-gray-100">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-8">Service & Experience</h2>
+            <div class="max-w-3xl mx-auto space-y-12">
+                <div>
+                    <h3 class="text-xl font-semibold">Mental Health Professional</h3>
+                    <p class="text-gray-600">Acute Psychiatric Care | 2015–2024</p>
+                    <ul class="list-disc pl-6 mt-2">
+                        <li>Managed crisis interventions for high-risk patients, reducing escalation incidents by 30%.</li>
+                        <li>Conducted behavioral assessments to inform treatment plans and risk management strategies.</li>
+                        <li>Led training sessions on de-escalation techniques for staff, enhancing team preparedness.</li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-xl font-semibold">Data Analyst (Part-Time)</h3>
+                    <p class="text-gray-600">Healthcare Consulting | 2020–2023</p>
+                    <ul class="list-disc pl-6 mt-2">
+                        <li>Developed statistical models to predict patient outcomes, improving resource allocation.</li>
+                        <li>Created data visualizations for stakeholder presentations, driving evidence-based decisions.</li>
+                        <li>Collaborated with cross-functional teams to integrate data insights into operational strategies.</li>
+                    </ul>
                 </div>
             </div>
-        </section>
+        </div>
+    </section>
 
-        <!-- Experience Section -->
-        <section id="experience" class="py-16">
-            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <h2 class="text-3xl font-bold text-navy-900 dark:text-white mb-8 text-center font-heading">Service & Experience</h2>
-                <div class="space-y-8">
-                    <div class="bg-white dark:bg-gray-700 p-6 rounded-lg shadow-md">
-                        <h3 class="text-xl font-semibold text-navy-900 dark:text-white font-heading">Mental Health Professional</h3>
-                        <p class="text-gray-600 dark:text-gray-400">Acute Psychiatric Care | 2015–2024</p>
-                        <ul class="list-disc list-inside text-gray-700 dark:text-gray-300 mt-4">
-                            <li>Managed crisis interventions for high-risk patients, reducing escalation incidents by 30%.</li>
-                            <li>Conducted behavioral assessments to inform treatment plans and risk management strategies.</li>
-                            <li>Led training sessions on de-escalation techniques for staff, enhancing team preparedness.</li>
-                        </ul>
-                    </div>
-                    <div class="bg-white dark:bg-gray-700 p-6 rounded-lg shadow-md">
-                        <h3 class="text-xl font-semibold text-navy-900 dark:text-white font-heading">Data Analyst (Part-Time)</h3>
-                        <p class="text-gray-600 dark:text-gray-400">Healthcare Consulting | 2020–2023</p>
-                        <ul class="list-disc list-inside text-gray-700 dark:text-gray-300 mt-4">
-                            <li>Developed statistical models to predict patient outcomes, improving resource allocation.</li>
-                            <li>Created data visualizations for stakeholder presentations, driving evidence-based decisions.</li>
-                            <li>Collaborated with cross-functional teams to integrate data insights into operational strategies.</li>
-                        </ul>
-                    </div>
+    <!-- Contact Section -->
+    <section id="contact" class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-8">Connect</h2>
+            <div class="max-w-3xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div>
+                    <h3 class="text-xl font-semibold mb-4">Contact Information</h3>
+                    <p>Email: <a href="mailto:jgwalsh@example.com" class="text-blue-600 hover:underline">jgwalsh@example.com</a></p>
+                    <p>Phone: <a href="tel:+16173833745" class="text-blue-600 hover:underline">(617) 383-3745</a></p>
                 </div>
-            </div>
-        </section>
-
-        <!-- Contact Section -->
-        <section id="contact" class="py-16">
-            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <h2 class="text-3xl font-bold text-navy-900 dark:text-white mb-8 text-center font-heading">Connect</h2>
-                <div class="max-w-lg mx-auto space-y-6">
-                    <div class="bg-white dark:bg-gray-700 p-6 rounded-lg shadow-md text-center">
-                        <h3 class="text-xl font-semibold text-navy-900 dark:text-white mb-4 font-heading">Contact Information</h3>
-                        <p class="text-lg text-gray-700 dark:text-gray-300 mb-2"><strong>Email:</strong> <a href="mailto:jgwalsh@proton.me" class="text-gold-400 hover:underline">jgwalsh@proton.me</a></p>
-                        <p class="text-lg text-gray-700 dark:text-gray-300"><strong>Phone:</strong> <a href="tel:+16173833745" class="text-gold-400 hover:underline">(617) 383-3745</a></p>
-                    </div>
-                    <div class="bg-white dark:bg-gray-700 p-6 rounded-lg shadow-md">
-                        <h3 class="text-xl font-semibold text-navy-900 dark:text-white mb-4 font-heading">Contact Form</h3>
-                        <form action="#" onsubmit="alert('Form submission disabled. Please use the email link.'); return false;" class="space-y-4">
-                            <label for="name" class="block text-gray-700 dark:text-gray-300 font-body">Name</label>
-                            <input type="text" id="name" class="w-full p-2 border rounded-lg dark:bg-gray-800 dark:border-gray-600 dark:text-white">
-
-                            <label for="email" class="block text-gray-700 dark:text-gray-300 font-body">Email</label>
-                            <input type="email" id="email" class="w-full p-2 border rounded-lg dark:bg-gray-800 dark:border-gray-600 dark:text-white">
-
-                            <label for="message" class="block text-gray-700 dark:text-gray-300 font-body">Message</label>
-                            <textarea id="message" rows="4" class="w-full p-2 border rounded-lg dark:bg-gray-800 dark:border-gray-600 dark:text-white"></textarea>
-
-                            <button type="submit" class="w-full bg-navy-900 text-white px-6 py-3 rounded-lg font-semibold hover:bg-navy-800 transition">Send Message</button>
-                        </form>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Professional Profiles -->
-        <section id="profiles" class="py-16 bg-gray-200 dark:bg-gray-800">
-            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <h2 class="text-3xl font-bold text-navy-900 dark:text-white mb-8 text-center font-heading">Professional Profiles</h2>
-                <div class="grid grid-cols-2 md:grid-cols-4 gap-8 justify-items-center">
-                    <a href="https://www.linkedin.com/in/jgregorywalsh" target="_blank" rel="noopener" aria-label="Visit LinkedIn Profile" class="text-gold-400 dark:text-white hover:text-gold-500 transition">
-                        <img src="assets/icons/linkedin.svg" alt="LinkedIn Icon" class="h-16 w-16" loading="lazy">
-                    </a>
-                    <a href="https://github.com/jgwalsh02134" target="_blank" rel="noopener" aria-label="Visit GitHub Profile" class="text-gold-400 dark:text-white hover:text-gold-500 transition">
-                        <picture>
-                            <source media="(prefers-color-scheme: dark)" srcset="assets/icons/github.svg">
-                            <img src="assets/icons/github copy.svg" alt="GitHub Icon" class="h-16 w-16" loading="lazy">
-                        </picture>
-                    </a>
-                    <a href="https://www.usajobs.gov/applicant/profile/" target="_blank" rel="noopener" aria-label="Visit USAJobs Profile" class="text-gold-400 dark:text-white hover:text-gold-500 transition">
-                        <img src="assets/icons/usajobs.svg" alt="USAJobs Icon" class="h-16 w-16" loading="lazy">
-                    </a>
-                    <a href="https://www.researchgate.net/profile/J-Gregory-Walsh" target="_blank" rel="noopener" aria-label="Visit ResearchGate Profile" class="text-gold-400 dark:text-white hover:text-gold-500 transition">
-                        <img src="assets/icons/researchgate.svg" alt="ResearchGate Icon" class="h-16 w-16" loading="lazy">
-                    </a>
-                </div>
-            </div>
-        </section>
-
-        <!-- Academic & Institutional -->
-        <section id="institutional" class="py-16">
-            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <h2 class="text-3xl font-bold text-navy-900 dark:text-white mb-8 text-center font-heading">Academic & Institutional</h2>
-                <div class="grid grid-cols-2 md:grid-cols-5 gap-8 justify-items-center">
-                    <a href="https://orcid.org/0000-0002-4420-5724" target="_blank" rel="noopener" aria-label="Visit ORCID Profile" class="text-gold-400 dark:text-white hover:text-gold-500 transition">
-                        <img src="assets/icons/orcid.svg" alt="ORCID Icon" class="h-16 w-16" loading="lazy">
-                    </a>
-                    <a href="https://jgwalsh.academia.edu/" target="_blank" rel="noopener" aria-label="Visit Academia.edu Profile" class="text-gold-400 dark:text-white hover:text-gold-500 transition">
-                        <picture>
-                            <source media="(prefers-color-scheme: dark)" srcset="assets/icons/academia.svg">
-                            <img src="assets/icons/icons8-academia.edu.svg" alt="Academia.edu Icon" class="h-16 w-16" loading="lazy">
-                        </picture>
-                    </a>
-                    <a href="mailto:jgwalsh@bu.edu" aria-label="Email via Boston University" class="text-gold-400 dark:text-white hover:text-gold-500 transition">
-                        <img src="assets/icons/bu.svg" alt="Boston University Icon" class="h-16 w-16" loading="lazy">
-                    </a>
-                    <a href="https://saintsnetwork.siena.edu/profile/gregwalsh/" target="_blank" rel="noopener" aria-label="Visit Siena College Alumni Profile" class="text-gold-400 dark:text-white hover:text-gold-500 transition">
-                        <img src="assets/icons/SIENa-S.svg" alt="Siena College Icon" class="h-16 w-16" loading="lazy">
-                    </a>
-                    <a href="mailto:jgwalsh@proton.me" aria-label="Email via ProtonMail" class="text-gold-400 dark:text-white hover:text-gold-500 transition">
-                        <img src="assets/icons/protonmail.svg" alt="ProtonMail Icon" class="h-16 w-16" loading="lazy">
-                    </a>
-                </div>
-            </div>
-        </section>
-
-        <!-- Footer -->
-        <footer class="bg-navy-900 text-white py-8">
-            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-                    <!-- Links -->
+                <div>
+                    <h3 class="text-xl font-semibold mb-4">Contact Form</h3>
                     <div>
-                        <h3 class="text-lg font-semibold mb-4 font-heading">Links</h3>
-                        <ul class="space-y-2">
-                            <li><a href="#about" class="text-sm hover:text-gold-400 transition font-body">Mission & Profile</a></li>
-                            <li><a href="#skills" class="text-sm hover:text-gold-400 transition font-body">Core Competencies</a></li>
-                            <li><a href="#experience" class="text-sm hover:text-gold-400 transition font-body">Service & Experience</a></li>
-                            <li><a href="#contact" class="text-sm hover:text-gold-400 transition font-body">Connect</a></li>
-                            <li><a href="digital-card.html" class="text-sm hover:text-gold-400 transition font-body">Quick Reference</a></li>
-                        </ul>
+                        <label for="name" class="block text-lg mb-2">Name</label>
+                        <input type="text" id="name" class="w-full p-3 border rounded-lg mb-4" placeholder="Your Name">
                     </div>
-                    <!-- Contact -->
                     <div>
-                        <h3 class="text-lg font-semibold mb-4 font-heading">Contact</h3>
-                        <ul class="space-y-2">
-                            <li>
-                                <a href="mailto:jgwalsh@proton.me" class="text-sm hover:text-gold-400 transition flex items-center font-body">
-                                    <i class="fas fa-envelope mr-2"></i> jgwalsh@proton.me
-                                </a>
-                            </li>
-                            <li>
-                                <a href="tel:+16173833745" class="text-sm hover:text-gold-400 transition flex items-center font-body">
-                                    <i class="fas fa-phone mr-2"></i> (617) 383-3745
-                                </a>
-                            </li>
-                        </ul>
+                        <label for="email" class="block text-lg mb-2">Email</label>
+                        <input type="email" id="email" class="w-full p-3 border rounded-lg mb-4" placeholder="Your Email">
                     </div>
-                </div>
-                <div class="border-t border-gray-700 mt-8 pt-6 text-center">
-                    <p class="text-sm font-body">© 2025 J. Gregory Walsh. All rights reserved. Built with Tailwind CSS. Deployed via Cloudflare Pages.</p>
+                    <div>
+                        <label for="message" class="block text-lg mb-2">Message</label>
+                        <textarea id="message" class="w-full p-3 border rounded-lg mb-4" rows="5" placeholder="Your Message"></textarea>
+                    </div>
+                    <button onclick="submitForm()" class="bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700">Send Message</button>
                 </div>
             </div>
-        </footer>
-    </main>
+        </div>
+    </section>
 
-    <!-- Smooth Scrolling, Active Link Highlighting, and Dark Mode Toggle Script -->
-    <script defer>
-        // Smooth Scrolling
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function(e) {
-                e.preventDefault();
-                const target = document.querySelector(this.getAttribute('href'));
-                if (target) {
-                    target.scrollIntoView({
-                        behavior: 'smooth'
-                    });
-                }
-                // Close mobile menu after clicking a link
-                const mobileMenu = document.getElementById('mobile-menu');
-                mobileMenu.classList.add('hidden');
-                const button = document.getElementById('mobile-menu-button');
-                button.setAttribute('aria-expanded', 'false');
-            });
-        });
+    <!-- Quick Reference Section -->
+    <section id="quick-ref" class="py-16 bg-gray-100">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-8">Quick Reference</h2>
+            <div class="max-w-3xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div>
+                    <h3 class="text-xl font-semibold mb-4">Professional Profiles</h3>
+                    <ul class="space-y-2">
+                        <li><img src="https://iconsusa.org/assets%20/icons_copy/linkedin.svg" alt="LinkedIn" class="icon"><a href="https://www.linkedin.com/in/jgregorywalsh" class="text-blue-600 hover:underline">LinkedIn</a></li>
+                        <li><img src="https://iconsusa.org/assets%20/icons_copy/github.svg" alt="GitHub" class="icon"><a href="https://github.com/jgwalsh02134" class="text-blue-600 hover:underline">GitHub</a></li>
+                        <li><img src="https://iconsusa.org/assets%20/icons_copy/protonmail.svg" alt="ProtonMail" class="icon"><a href="#" class="text-blue-600 hover:underline">ProtonMail</a></li>
+                        <li><img src="https://iconsusa.org/assets%20/icons_copy/facebook.svg" alt="Facebook" class="icon"><a href="https://www.facebook.com/jgregwalsh" class="text-blue-600 hover:underline">Facebook</a></li>
+                        <li><img src="https://iconsusa.org/assets%20/icons_copy/icons8-usa.svg" alt="USAJobs.gov" class="icon"><a href="https://www.usajobs.gov/applicant/profile/" class="text-blue-600 hover:underline">USAJobs.gov</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-xl font-semibold mb-4">Academic & Institutional</h3>
+                    <ul class="space-y-2">
+                        <li>
+                            <img src="https://iconsusa.org/assets%20/icons_copy/researchgate.svg" alt="ResearchGate" class="icon light-specific">
+                            <img src="https://iconsusa.org/assets%20/icons_copy/researchgate-w.svg" alt="ResearchGate" class="icon dark-specific hidden dark:inline">
+                            <a href="https://www.researchgate.net/profile/Jg_Walsh" class="text-blue-600 hover:underline">ResearchGate</a>
+                        </li>
+                        <li><img src="https://iconsusa.org/assets%20/icons_copy/orcid.svg" alt="ORCID" class="icon"><a href="https://orcid.org/0000-0002-4420-5724" class="text-blue-600 hover:underline">ORCID</a></li>
+                        <li><img src="https://iconsusa.org/assets%20/icons_copy/academia-1.svg" alt="Academia.edu" class="icon"><a href="https://siena.academia.edu/JGregoryWalsh" class="text-blue-600 hover:underline">Academia.edu</a></li>
+                        <li><img src="https://iconsusa.org/assets%20/icons_copy/bu.svg" alt="Boston University Email" class="icon"><a href="mailto:jgwalsh@bu.edu" class="text-blue-600 hover:underline">Boston University Email</a></li>
+                        <li><img src="https://iconsusa.org/assets%20/icons_copy/SIENa-S.svg" alt="Siena Alumni Profile" class="icon"><a href="https://saintsnetwork.siena.edu/profile/gregwalsh/" class="text-blue-600 hover:underline">Siena Alumni Profile</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
 
-        // Mobile Menu Toggle
-        document.getElementById('mobile-menu-button').addEventListener('click', function() {
-            const mobileMenu = document.getElementById('mobile-menu');
-            const body = document.body;
-            const isExpanded = this.getAttribute('aria-expanded') === 'true';
-            mobileMenu.classList.toggle('hidden');
-            body.classList.toggle('overflow-hidden', !isExpanded);
-            this.setAttribute('aria-expanded', !isExpanded);
-        });
+    <!-- Footer -->
+    <footer class="bg-white py-6">
+        <div class="container mx-auto px-4 text-center">
+            <div class="mb-4">
+                <h3 class="text-lg font-semibold mb-2">Links</h3>
+                <ul class="flex justify-center space-x-4">
+                    <li><a href="#mission" class="text-blue-600 hover:underline">Mission & Profile</a></li>
+                    <li><a href="#competencies" class="text-blue-600 hover:underline">Core Competencies</a></li>
+                    <li><a href="#experience" class="text-blue-600 hover:underline">Service & Experience</a></li>
+                    <li><a href="#contact" class="text-blue-600 hover:underline">Connect</a></li>
+                    <li><a href="#quick-ref" class="text-blue-600 hover:underline">Quick Reference</a></li>
+                </ul>
+            </div>
+            <div class="mb-4">
+                <h3 class="text-lg font-semibold mb-2">Contact</h3>
+                <p><a href="mailto:jgwalsh@example.com" class="text-blue-600 hover:underline">jgwalsh@example.com</a></p>
+                <p><a href="tel:+16173833745" class="text-blue-600 hover:underline">(617) 383-3745</a></p>
+            </div>
+            <p>© 2025 J. Gregory Walsh. All rights reserved. Built with Tailwind CSS. Deployed via Cloudflare Pages.</p>
+        </div>
+    </footer>
 
-        // Active Link Highlighting on Scroll
-        const sections = document.querySelectorAll('section[id]');
-        const navLinks = document.querySelectorAll('.nav-link');
-        window.addEventListener('scroll', () => {
-            let current = '';
-            sections.forEach(section => {
-                const sectionTop = section.offsetTop - 80; // Adjust for sticky nav height
-                if (window.scrollY >= sectionTop) {
-                    current = section.getAttribute('id');
-                }
-            });
-            navLinks.forEach(link => {
-                link.classList.remove('text-gold-400', 'font-semibold');
-                if (link.getAttribute('href') === `#${current}`) {
-                    link.classList.add('text-gold-400', 'font-semibold');
-                }
-            });
-        });
+    <script>
+        // Contact Form Submission
+        function submitForm() {
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const message = document.getElementById('message').value;
+            if (name && email && message) {
+                alert('Thank you for your message! We will get back to you soon.');
+                document.getElementById('name').value = '';
+                document.getElementById('email').value = '';
+                document.getElementById('message').value = '';
+            } else {
+                alert('Please fill out all fields.');
+            }
+        }
 
         // Dark Mode Toggle
-        const darkModeToggle = document.getElementById('dark-mode-toggle');
-        const mobileDarkModeToggle = document.getElementById('mobile-dark-mode-toggle');
-        const html = document.documentElement;
-
-        const toggleDarkMode = () => {
-            html.classList.toggle('dark');
-            const isDark = html.classList.contains('dark');
-            darkModeToggle.querySelector('i').classList.toggle('fa-moon', !isDark);
-            darkModeToggle.querySelector('i').classList.toggle('fa-sun', isDark);
-            mobileDarkModeToggle.querySelector('i').classList.toggle('fa-moon', !isDark);
-            mobileDarkModeToggle.querySelector('i').classList.toggle('fa-sun', isDark);
-            localStorage.setItem('darkMode', isDark ? 'dark' : 'light');
-        };
-
-        darkModeToggle.addEventListener('click', toggleDarkMode);
-        mobileDarkModeToggle.addEventListener('click', toggleDarkMode);
-
-        // Load saved theme preference
-        const savedTheme = localStorage.getItem('darkMode');
-        if (savedTheme === 'dark' || (!savedTheme && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
-            html.classList.add('dark');
-            toggleDarkMode();
-        }
-    </script>
-
-    <!-- Custom Tailwind Config -->
-    <script>
-        tailwind.config = {
-            darkMode: 'class',
-            theme: {
-                extend: {
-                    colors: {
-                        navy: {
-                            900: '#1B263B',
-                            800: '#2A3A5B',
-                        },
-                        gold: {
-                            400: '#F4A261',
-                            500: '#E76F51',
-                        },
-                    },
-                    fontFamily: {
-                        heading: ['Georgia', 'serif'],
-                        body: ['Inter', 'sans-serif'],
-                    },
-                },
-            },
-        };
-    </script>
-
-    <!-- Chart.js Script for Profile Distribution Pie Chart -->
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-    <script>
-        const ctx = document.getElementById('profileDistributionChart').getContext('2d');
-        const profileDistributionChart = new Chart(ctx, {
-            type: 'pie',
-            data: {
-                labels: ['Professional Profiles', 'Academic & Institutional'],
-                datasets: [{
-                    data: [4, 5], // 4 professional (LinkedIn, GitHub, USAJobs, ResearchGate), 5 academic (ORCID, Academia, BU, Siena, ProtonMail)
-                    backgroundColor: ['#F4A261', '#1B263B'],
-                    borderColor: ['#FFFFFF'],
-                    borderWidth: 1
-                }]
-            },
-            options: {
-                responsive: true,
-                plugins: {
-                    legend: {
-                        position: 'top',
-                        labels: {
-                            color: '#1B263B',
-                            font: { size: 14 }
-                        }
-                    },
-                    title: {
-                        display: true,
-                        text: 'Profile Distribution',
-                        color: '#1B263B',
-                        font: { size: 16 }
-                    }
-                }
-            }
+        const toggleButton = document.getElementById('dark-mode-toggle');
+        toggleButton.addEventListener('click', () => {
+            document.documentElement.classList.toggle('dark');
+            toggleButton.textContent = document.documentElement.classList.contains('dark') ? 'Toggle Light Mode' : 'Toggle Dark Mode';
         });
     </script>
 </body>
