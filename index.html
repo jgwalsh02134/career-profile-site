@@ -6,11 +6,9 @@
   <title>J. Gregory Walsh | Behavioral Insight for Strategy, Safety & Systems</title>
   <meta name="description" content="Clinically grounded behavioral expertise supporting mission-driven operations, public safety, and strategic roles.">
 
-  <!-- Enable class-based dark mode -->
+  <!-- Tailwind with class-based dark mode -->
   <script>
-    tailwind.config = {
-      darkMode: 'class'
-    }
+    tailwind.config = { darkMode: 'class' }
   </script>
   <script src="https://cdn.tailwindcss.com"></script>
 
@@ -21,16 +19,14 @@
       margin-right: 8px;
       vertical-align: middle;
     }
-    /* no filter by default */
+    /* Dark-mode filters */
     .dark .icon { filter: none !important; }
-    /* invert only light-specific icons */
     .dark .icon.light-specific { filter: brightness(0) invert(1) !important; }
     .mobile-menu { transition: max-height 0.3s ease-in-out; }
     body { min-height: 100vh; display: flex; flex-direction: column; }
     main { flex-grow: 1; }
   </style>
 </head>
-
 <body class="font-sans bg-gray-100 dark:bg-gray-900 text-gray-800 dark:text-gray-200 transition-colors duration-300">
 
   <!-- HEADER -->
@@ -40,19 +36,21 @@
         J. Gregory Walsh
       </a>
       <nav class="hidden md:flex space-x-6">
-        <a href="about.html"       class="text-gray-700 dark:text-gray-300 hover:text-blue-500 transition">About</a>
-        <a href="experience.html"  class="text-gray-700 dark:text-gray-300 hover:text-blue-500 transition">Experience</a>
-        <a href="projects.html"    class="text-gray-700 dark:text-gray-300 hover:text-blue-500 transition">Projects</a>
-        <a href="resume.html"      class="text-gray-700 dark:text-gray-300 hover:text-blue-500 transition">Résumé</a>
-        <a href="contact.html"     class="text-gray-700 dark:text-gray-300 hover:text-blue-500 transition">Contact</a>
-        <a href="#quick-ref"       class="text-gray-700 dark:text-gray-300 hover:text-blue-500 transition">Quick Ref</a>
+        <a href="about.html"      class="text-gray-700 dark:text-gray-300 hover:text-blue-500 transition">About</a>
+        <a href="experience.html" class="text-gray-700 dark:text-gray-300 hover:text-blue-500 transition">Experience</a>
+        <a href="projects.html"   class="text-gray-700 dark:text-gray-300 hover:text-blue-500 transition">Projects</a>
+        <a href="resume.html"     class="text-gray-700 dark:text-gray-300 hover:text-blue-500 transition">Résumé</a>
+        <a href="contact.html"    class="text-gray-700 dark:text-gray-300 hover:text-blue-500 transition">Contact</a>
+        <a href="#quick-ref"      class="text-gray-700 dark:text-gray-300 hover:text-blue-500 transition">Quick Ref</a>
       </nav>
       <div class="flex items-center space-x-4">
+        <!-- Theme toggle -->
         <button id="dark-mode-toggle"
-                class="text-sm px-3 py-1 border rounded-lg text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-700 transition"
-                aria-label="Toggle dark mode">
-          Toggle Dark Mode
+                aria-label="Toggle theme"
+                class="p-2 rounded-lg text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-700 transition">
+          <span id="theme-icon">☾</span>
         </button>
+        <!-- Mobile menu toggle -->
         <button id="mobile-menu-toggle"
                 class="md:hidden text-2xl text-gray-700 dark:text-gray-300"
                 aria-label="Toggle mobile menu" aria-expanded="false">
@@ -60,8 +58,7 @@
         </button>
       </div>
     </div>
-
-    <!-- Mobile menu -->
+    <!-- Mobile navigation -->
     <div id="mobile-menu" class="mobile-menu max-h-0 overflow-hidden md:hidden bg-white dark:bg-gray-800">
       <ul class="flex flex-col items-center space-y-4 py-4">
         <li><a href="about.html"      class="text-lg text-gray-700 dark:text-gray-300 hover:text-blue-500 transition">About</a></li>
@@ -213,40 +210,20 @@
             <h3 class="text-lg sm:text-xl font-semibold mb-4 text-gray-900 dark:text-white">Professional</h3>
             <ul class="space-y-3 text-left">
               <li class="flex items-center">
-                <img src="https://iconsusa.org/assets%20/icons_copy/linkedin.svg"
-                     alt="LinkedIn"
-                     class="icon no-invert">
-                <a href="https://www.linkedin.com/in/jgregorywalsh"
-                   class="text-gray-800 dark:text-gray-200 hover:underline">
-                  LinkedIn
-                </a>
+                <img src="https://iconsusa.org/assets%20/icons_copy/linkedin.svg" alt="LinkedIn" class="icon no-invert">
+                <a href="https://www.linkedin.com/in/jgregorywalsh" class="text-gray-800 dark:text-gray-200 hover:underline">LinkedIn</a>
               </li>
               <li class="flex items-center">
-                <img src="https://iconsusa.org/assets%20/icons_copy/icons8-usa.svg"
-                     alt="USAJobs.gov"
-                     class="icon no-invert">
-                <a href="https://www.usajobs.gov/applicant/profile/"
-                   class="text-gray-800 dark:text-gray-200 hover:underline">
-                  USAJobs.gov
-                </a>
+                <img src="https://iconsusa.org/assets%20/icons_copy/icons8-usa.svg" alt="USAJobs.gov" class="icon no-invert">
+                <a href="https://www.usajobs.gov/applicant/profile/" class="text-gray-800 dark:text-gray-200 hover:underline">USAJobs.gov</a>
               </li>
               <li class="flex items-center">
-                <img src="assets/icons/orcid.svg"
-                     alt="ORCID"
-                     class="icon">
-                <a href="https://orcid.org/0000-0002-4420-5724"
-                   class="text-gray-800 dark:text-gray-200 hover:underline">
-                  ORCID
-                </a>
+                <img src="assets/icons/orcid.svg" alt="ORCID" class="icon">
+                <a href="https://orcid.org/0000-0002-4420-5724" class="text-gray-800 dark:text-gray-200 hover:underline">ORCID</a>
               </li>
               <li class="flex items-center">
-                <img src="https://iconsusa.org/assets%20/icons_copy/protonmail.svg"
-                     alt="ProtonMail"
-                     class="icon no-invert">
-                <a href="mailto:jgwalsh@proton.me"
-                   class="text-gray-800 dark:text-gray-200 hover:underline">
-                  ProtonMail
-                </a>
+                <img src="https://iconsusa.org/assets%20/icons_copy/protonmail.svg" alt="ProtonMail" class="icon no-invert">
+                <a href="mailto:jgwalsh@proton.me" class="text-gray-800 dark:text-gray-200 hover:underline">ProtonMail</a>
               </li>
             </ul>
           </div>
@@ -256,40 +233,19 @@
             <h3 class="text-lg sm:text-xl font-semibold mb-4 text-gray-900 dark:text-white">Collaborators</h3>
             <ul class="space-y-3 text-left">
               <li class="flex items-center">
-                <img src="assets/icons/github.svg"
-                     alt="GitHub (light)"
-                     class="icon light-specific hidden dark:inline">
-                <img src="assets/icons/github copy.svg"
-                     alt="GitHub (dark)"
-                     class="icon dark-specific inline dark:hidden">
-                <a href="https://github.com/jgwalsh02134"
-                   class="text-gray-800 dark:text-gray-200 hover:underline">
-                  GitHub
-                </a>
+                <img src="assets/icons/github.svg" alt="GitHub (light)" class="icon light-specific hidden dark:inline">
+                <img src="assets/icons/github copy.svg" alt="GitHub (dark)" class="icon dark-specific inline dark:hidden">
+                <a href="https://github.com/jgwalsh02134" class="text-gray-800 dark:text-gray-200 hover:underline">GitHub</a>
               </li>
               <li class="flex items-center">
-                <img src="assets/icons/researchgate.svg"
-                     alt="ResearchGate (light)"
-                     class="icon light-specific hidden dark:inline">
-                <img src="assets/icons/researchgate-w.svg"
-                     alt="ResearchGate (dark)"
-                     class="icon dark-specific inline dark:hidden">
-                <a href="https://www.researchgate.net/profile/Jg_Walsh"
-                   class="text-gray-800 dark:text-gray-200 hover:underline">
-                  ResearchGate
-                </a>
+                <img src="assets/icons/researchgate.svg" alt="ResearchGate (light)" class="icon light-specific hidden dark:inline">
+                <img src="assets/icons/researchgate-w.svg" alt="ResearchGate (dark)" class="icon dark-specific inline dark:hidden">
+                <a href="https://www.researchgate.net/profile/Jg_Walsh" class="text-gray-800 dark:text-gray-200 hover:underline">ResearchGate</a>
               </li>
               <li class="flex items-center">
-                <img src="assets/icons/icons8-academia.edu.svg"
-                     alt="Academia.edu (light)"
-                     class="icon light-specific hidden dark:inline">
-                <img src="assets/icons/academia.svg"
-                     alt="Academia.edu (dark)"
-                     class="icon dark-specific inline dark:hidden">
-                <a href="https://siena.academia.edu/JGregoryWalsh"
-                   class="text-gray-800 dark:text-gray-200 hover:underline">
-                  Academia.edu
-                </a>
+                <img src="assets/icons/icons8-academia.edu.svg" alt="Academia.edu (light)" class="icon light-specific hidden dark:inline">
+                <img src="assets/icons/academia.svg" alt="Academia.edu (dark)" class="icon dark-specific inline dark:hidden">
+                <a href="https://siena.academia.edu/JGregoryWalsh" class="text-gray-800 dark:text-gray-200 hover:underline">Academia.edu</a>
               </li>
             </ul>
           </div>
@@ -299,31 +255,16 @@
             <h3 class="text-lg sm:text-xl font-semibold mb-4 text-gray-900 dark:text-white">Academic</h3>
             <ul class="space-y-3 text-left">
               <li class="flex items-center">
-                <img src="assets/icons/bu.svg"
-                     alt="Boston University Email"
-                     class="icon no-invert">
-                <a href="mailto:jgwalsh@bu.edu"
-                   class="text-gray-800 dark:text-gray-200 hover:underline">
-                  Boston University Email
-                </a>
+                <img src="assets/icons/bu.svg" alt="Boston University Email" class="icon no-invert">
+                <a href="mailto:jgwalsh@bu.edu" class="text-gray-800 dark:text-gray-200 hover:underline">Boston University Email</a>
               </li>
               <li class="flex items-center">
-                <img src="assets/icons/SIENa-S.svg"
-                     alt="Siena Alumni Profile"
-                     class="icon no-invert">
-                <a href="https://saintsnetwork.siena.edu/profile/gregwalsh/"
-                   class="text-gray-800 dark:text-gray-200 hover:underline">
-                  Siena Alumni Profile
-                </a>
+                <img src="assets/icons/SIENa-S.svg" alt="Siena Alumni Profile" class="icon no-invert">
+                <a href="https://saintsnetwork.siena.edu/profile/gregwalsh/" class="text-gray-800 dark:text-gray-200 hover:underline">Siena Alumni Profile</a>
               </li>
               <li class="flex items-center">
-                <img src="https://iconsusa.org/assets%20/icons_copy/facebook.svg"
-                     alt="Facebook"
-                     class="icon">
-                <a href="https://www.facebook.com/jgregorywalsh"
-                   class="text-gray-800 dark:text-gray-200 hover:underline">
-                  Facebook
-                </a>
+                <img src="https://iconsusa.org/assets%20/icons_copy/facebook.svg" alt="Facebook" class="icon">
+                <a href="https://www.facebook.com/jgregorywalsh" class="text-gray-800 dark:text-gray-200 hover:underline">Facebook</a>
               </li>
             </ul>
           </div>
@@ -359,12 +300,31 @@
   </footer>
 
   <script>
+    // Theme toggle logic
+    const btn  = document.getElementById('dark-mode-toggle');
+    const icon = document.getElementById('theme-icon');
+    btn.addEventListener('click', () => {
+      const isDark = document.documentElement.classList.toggle('dark');
+      icon.textContent = isDark ? '☀︎' : '☾';
+    });
+
+    // Mobile menu toggle logic
+    const mobileBtn  = document.getElementById('mobile-menu-toggle');
+    const mobileMenu = document.getElementById('mobile-menu');
+    mobileBtn.addEventListener('click', () => {
+      const expanded = mobileBtn.getAttribute('aria-expanded') === 'true';
+      mobileBtn.setAttribute('aria-expanded', String(!expanded));
+      mobileMenu.classList.toggle('max-h-0');
+      mobileMenu.classList.toggle('max-h-screen');
+    });
+
+    // Contact form stub
     function submitForm() {
       const name    = document.getElementById('name').value.trim();
       const email   = document.getElementById('email').value.trim();
       const message = document.getElementById('message').value.trim();
       if (name && email && message) {
-        alert('Thank you for your message! We will get back to you soon.');
+        alert('Thank you! We will get back to you soon.');
         document.getElementById('name').value = '';
         document.getElementById('email').value = '';
         document.getElementById('message').value = '';
@@ -372,27 +332,6 @@
         alert('Please fill out all fields.');
       }
     }
-
-    (function() {
-      const toggleBtn   = document.getElementById('dark-mode-toggle');
-      const mobileBtn   = document.getElementById('mobile-menu-toggle');
-      const mobileMenu  = document.getElementById('mobile-menu');
-
-      toggleBtn?.addEventListener('click', () => {
-        document.documentElement.classList.toggle('dark');
-        const isDark = document.documentElement.classList.contains('dark');
-        toggleBtn.textContent = isDark ? 'Toggle Light Mode' : 'Toggle Dark Mode';
-        toggleBtn.setAttribute('aria-label', isDark ? 'Toggle light mode' : 'Toggle dark mode');
-      });
-
-      mobileBtn?.addEventListener('click', () => {
-        const expanded = mobileBtn.getAttribute('aria-expanded') === 'true';
-        mobileBtn.setAttribute('aria-expanded', String(!expanded));
-        mobileMenu.classList.toggle('max-h-0');
-        mobileMenu.classList.toggle('max-h-screen');
-        mobileBtn.textContent = expanded ? '☰' : '✕';
-      });
-    })();
   </script>
 </body>
 </html>
