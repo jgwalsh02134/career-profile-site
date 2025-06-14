@@ -7,6 +7,7 @@
   <meta name="description" content="Clinically grounded behavioral expertise supporting mission-driven operations, public safety, and strategic roles.">
   <script src="https://cdn.tailwindcss.com"></script>
   <style>
+    html { scroll-behavior: smooth; }
     :root { color-scheme: light dark; }
     .dark { background-color: #1f2937; color: #ffffff; }
     .dark a { color: #93c5fd; }
@@ -23,6 +24,7 @@
     .mobile-menu { transition: max-height 0.3s ease-in-out; }
     body { min-height: 100vh; display: flex; flex-direction: column; }
     main { flex-grow: 1; }
+    a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visible { outline: 2px solid #3B82F6; outline-offset: 2px; }
   </style>
 </head>
 <body class="font-sans bg-gray-100 text-gray-800 transition-colors duration-300">
@@ -54,7 +56,7 @@
     </div>
   </header>
 
-  <main class="flex-grow">
+  <main class="flex-grow" role="main">
     <section id="about" class="bg-gray-100 py-16 text-center px-4">
       <h2 class="text-2xl sm:text-3xl lg:text-4xl font-bold mb-2">J. Gregory Walsh</h2>
       <p class="text-base sm:text-lg font-semibold text-gray-600 mb-4">Behavioral Science | Crisis Strategy | Intelligence-Ready Insight</p>
@@ -219,7 +221,7 @@
     </section>
   </main>
 
-  <footer class="bg-gray-50 dark:bg-gray-800 py-4 space-y-4 px-4">
+  <footer class="bg-gray-50 dark:bg-gray-800 py-4 space-y-4 px-4" role="contentinfo">
     <div class="container mx-auto max-w-3xl text-center">
       <div class="mb-0 sm:mb-2">
         <h3 class="text-base sm:text-lg font-semibold mb-1 sm:mb-2">Navigation</h3>
