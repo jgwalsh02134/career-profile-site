@@ -2,14 +2,19 @@
   "name": "career-profile-site",
   "version": "1.0.0",
   "scripts": {
-    "build": "postcss css/styles.css -o styles.css --minify"
+    "build": "postcss css/styles.css -o styles.css --minify",
+    "lint:commits": "commitlint --from=HEAD~1",
+    "format": "prettier --write ."
   },
   "devDependencies": {
     "@cloudflare/vitest-pool-workers": "^0.8.37",
+    "@commitlint/cli": "^19.8.1",
+    "@commitlint/config-conventional": "^19.8.1",
     "@tailwindcss/postcss": "^4.1.10",
     "autoprefixer": "^10.4.21",
     "postcss": "^8.5.5",
     "postcss-cli": "^11.0.1",
+    "prettier": "^3.5.3",
     "tailwindcss": "^4.1.10",
     "vitest": "~3.1.0"
   }
