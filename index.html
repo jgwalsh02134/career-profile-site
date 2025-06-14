@@ -28,10 +28,10 @@
   </style>
 </head>
 <body class="font-sans bg-gray-100 text-gray-800 transition-colors duration-300">
-  <header class="bg-white shadow-md sticky top-0 z-10">
+  <header class="bg-white shadow-md sticky top-0 z-10" role="banner">
     <div class="container mx-auto px-4 py-4 flex items-center justify-between">
-      <h1 class="text-xl sm:text-2xl font-bold"><a href="index.html" class="hover:text-blue-500 transition">J. Gregory Walsh</a></h1>
-      <nav class="hidden md:flex space-x-6">
+      <h1 class="text-xl sm:text-2xl font-bold"><a href="index.html" class="hover:text-blue-500 transition" aria-current="page">J. Gregory Walsh</a></h1>
+      <nav class="hidden md:flex space-x-6" role="navigation" aria-label="Primary navigation">
         <a href="#about" class="hover:text-blue-500 transition">About</a>
         <a href="#experience" class="hover:text-blue-500 transition">Experience</a>
         <a href="#projects" class="hover:text-blue-500 transition">Projects</a>
@@ -40,11 +40,11 @@
         <a href="#quick-ref" class="hover:text-blue-500 transition">Quick Ref</a>
       </nav>
       <div class="flex items-center space-x-4">
-        <button id="dark-mode-toggle" class="text-sm px-3 py-1 border rounded-lg hover:bg-gray-200" aria-label="Toggle dark mode">☾</button>
-        <button id="mobile-menu-toggle" class="md:hidden text-2xl" aria-label="Toggle mobile menu" aria-expanded="false">☰</button>
+        <button id="dark-mode-toggle" class="text-sm px-3 py-1 border rounded-lg hover:bg-gray-200" aria-label="Toggle dark mode" aria-pressed="false">☾</button>
+        <button id="mobile-menu-toggle" class="md:hidden text-2xl" aria-label="Toggle mobile menu" aria-expanded="false" aria-pressed="false">☰</button>
       </div>
     </div>
-    <div id="mobile-menu" class="mobile-menu max-h-0 overflow-hidden md:hidden bg-white">
+    <div id="mobile-menu" class="mobile-menu max-h-0 overflow-hidden md:hidden bg-white" role="navigation" aria-label="Mobile navigation">
       <ul class="flex flex-col items-center space-y-4 py-4">
         <li><a href="#about" class="text-lg hover:text-blue-500 transition">About</a></li>
         <li><a href="#experience" class="text-lg hover:text-blue-500 transition">Experience</a></li>
@@ -57,8 +57,8 @@
   </header>
 
   <main class="flex-grow" role="main">
-    <section id="about" class="bg-gray-100 py-16 text-center px-4">
-      <h2 class="text-2xl sm:text-3xl lg:text-4xl font-bold mb-2">J. Gregory Walsh</h2>
+    <section id="about" class="bg-gray-100 py-16 text-center px-4" role="region" aria-labelledby="about-heading">
+      <p id="about-heading" class="text-3xl font-bold mb-2">J. Gregory Walsh</p>
       <p class="text-base sm:text-lg font-semibold text-gray-600 mb-4">Behavioral Science | Crisis Strategy | Intelligence-Ready Insight</p>
       <p class="text-sm sm:text-base lg:text-lg max-w-2xl mx-auto mb-6">
         I translate frontline behavioral expertise into actionable insight for public safety, federal operations, and strategic private-sector teams.
@@ -68,9 +68,9 @@
       </a>
     </section>
 
-    <section id="mission" class="bg-white dark:bg-gray-800 py-12 sm:py-16 px-4">
+    <section id="mission" class="bg-white dark:bg-gray-800 py-12 sm:py-16 px-4" role="region" aria-labelledby="mission-heading">
       <div class="container mx-auto max-w-3xl text-center">
-        <h2 class="text-2xl sm:text-3xl font-bold mb-6">Mission & Profile</h2>
+        <h2 id="mission-heading" class="text-2xl sm:text-3xl font-bold mb-6">Mission & Profile</h2>
         <div class="space-y-4 text-gray-700 dark:text-gray-100">
           <p>
             With a robust background in mental health care, I am transitioning to a career in law enforcement, focusing on federal agencies while exploring private-sector roles. My expertise lies in understanding human behavior, managing high-stakes situations, and leveraging data-driven decisions.
@@ -82,9 +82,9 @@
       </div>
     </section>
 
-    <section id="competencies" class="bg-white dark:bg-gray-800 py-12 sm:py-16 px-4">
+    <section id="competencies" class="bg-white dark:bg-gray-800 py-12 sm:py-16 px-4" role="region" aria-labelledby="competencies-heading">
       <div class="container mx-auto max-w-3xl text-center">
-        <h2 class="text-2xl sm:text-3xl font-bold mb-8">Core Competencies</h2>
+        <h2 id="competencies-heading" class="text-2xl sm:text-3xl font-bold mb-8">Core Competencies</h2>
         <div class="grid grid-cols-1 sm:grid-cols-3 gap-6">
           <div class="bg-gray-50 dark:bg-gray-700 p-6 rounded-lg shadow-sm">
             <h3 class="text-lg sm:text-xl font-semibold mb-2">Crisis Management</h3>
@@ -102,9 +102,9 @@
       </div>
     </section>
 
-    <section id="experience" class="bg-white dark:bg-gray-800 py-12 sm:py-16 px-4">
+    <section id="experience" class="bg-white dark:bg-gray-800 py-12 sm:py-16 px-4" role="region" aria-labelledby="experience-heading">
       <div class="container mx-auto max-w-3xl">
-        <h2 class="text-2xl sm:text-3xl font-bold text-center mb-8">Service & Experience</h2>
+        <h2 id="experience-heading" class="text-2xl sm:text-3xl font-bold text-center mb-8">Service & Experience</h2>
         <div class="space-y-8 text-gray-700 dark:text-gray-100">
           <div>
             <h3 class="text-lg sm:text-xl font-semibold">Mental Health Professional</h3>
@@ -128,10 +128,10 @@
       </div>
     </section>
 
-    <section id="contact" class="bg-white dark:bg-gray-800 py-12 sm:py-16 px-4">
+    <section id="contact" class="bg-white dark:bg-gray-800 py-12 sm:py-16 px-4" role="region" aria-labelledby="contact-heading">
       <div class="container mx-auto max-w-3xl grid grid-cols-1 md:grid-cols-2 gap-8">
         <div>
-          <h3 class="text-lg sm:text-xl font-semibold mb-4">Contact Information</h3>
+          <h3 id="contact-heading" class="text-lg sm:text-xl font-semibold mb-4">Contact Information</h3>
           <p>Email: <a href="mailto:jgwalsh@example.com" class="text-blue-600 hover:underline">jgwalsh@example.com</a></p>
           <p>Phone: <a href="tel:+16173833745" class="text-blue-600 hover:underline">(617) 383-3745</a></p>
         </div>
@@ -158,27 +158,27 @@
       </div>
     </section>
 
-    <section id="quick-ref" class="bg-white dark:bg-gray-800 py-12 sm:py-16 px-4">
+    <section id="quick-ref" class="bg-white dark:bg-gray-800 py-12 sm:py-16 px-4" role="region" aria-labelledby="quick-ref-heading">
       <div class="container mx-auto max-w-3xl text-center">
-        <h2 class="text-2xl sm:text-3xl font-bold mb-8">Quick Reference</h2>
+        <h2 id="quick-ref-heading" class="text-2xl sm:text-3xl font-bold mb-8">Quick Reference</h2>
         <div class="grid grid-cols-1 sm:grid-cols-2 gap-8">
           <div>
             <h3 class="text-lg sm:text-xl font-semibold mb-4">Professional</h3>
             <ul class="space-y-3 text-left">
               <li class="flex items-center">
-                <img src="https://iconsusa.org/assets%20/icons_copy/linkedin.svg" alt="LinkedIn" class="icon no-invert">
+                <img src="https://iconsusa.org/assets%20/icons_copy/linkedin.svg" alt="LinkedIn logo" loading="lazy" class="icon no-invert">
                 <a href="https://www.linkedin.com/in/jgregorywalsh" class="hover:underline">LinkedIn</a>
               </li>
               <li class="flex items-center">
-                <img src="https://iconsusa.org/assets%20/icons_copy/icons8-usa.svg" alt="USAJobs.gov" class="icon no-invert">
+                <img src="https://iconsusa.org/assets%20/icons_copy/icons8-usa.svg" alt="USAJobs.gov logo" loading="lazy" class="icon no-invert">
                 <a href="https://www.usajobs.gov/applicant/profile/" class="hover:underline">USAJobs.gov</a>
               </li>
               <li class="flex items-center">
-                <img src="https://iconsusa.org/assets%20/icons_copy/orcid.svg" alt="ORCID" class="icon">
+                <img src="https://iconsusa.org/assets%20/icons_copy/orcid.svg" alt="ORCID logo" loading="lazy" class="icon">
                 <a href="https://orcid.org/0000-0002-4420-5724" class="hover:underline">ORCID</a>
               </li>
               <li class="flex items-center">
-                <img src="https://iconsusa.org/assets%20/icons_copy/protonmail.svg" alt="ProtonMail" class="icon no-invert">
+                <img src="https://iconsusa.org/assets%20/icons_copy/protonmail.svg" alt="ProtonMail logo" loading="lazy" class="icon no-invert">
                 <a href="mailto:jgwalsh@proton.me" class="hover:underline">ProtonMail</a>
               </li>
             </ul>
@@ -187,18 +187,18 @@
             <h3 class="text-lg sm:text-xl font-semibold mb-4">Collaborators</h3>
             <ul class="space-y-3 text-left">
               <li class="flex items-center">
-                <img src="https://iconsusa.org/assets%20/icons_copy/github-2.svg" alt="GitHub" class="icon light-specific">
-                <img src="https://iconsusa.org/assets%20/icons_copy/github.svg" alt="GitHub" class="icon dark-specific hidden dark:inline">
+                <img src="https://iconsusa.org/assets%20/icons_copy/github-2.svg" alt="GitHub logo" loading="lazy" class="icon light-specific">
+                <img src="https://iconsusa.org/assets%20/icons_copy/github.svg" alt="GitHub logo" loading="lazy" class="icon dark-specific hidden dark:inline">
                 <a href="https://github.com/jgwalsh02134" class="hover:underline">GitHub</a>
               </li>
               <li class="flex items-center">
-                <img src="https://iconsusa.org/assets%20/icons_copy/researchgate.svg" alt="ResearchGate" class="icon light-specific">
-                <img src="https://iconsusa.org/assets%20/icons_copy/researchgate-w.svg" alt="ResearchGate" class="icon dark-specific hidden dark:inline">
+                <img src="https://iconsusa.org/assets%20/icons_copy/researchgate.svg" alt="ResearchGate logo" loading="lazy" class="icon light-specific">
+                <img src="https://iconsusa.org/assets%20/icons_copy/researchgate-w.svg" alt="ResearchGate logo" loading="lazy" class="icon dark-specific hidden dark:inline">
                 <a href="https://www.researchgate.net/profile/Jg_Walsh" class="hover:underline">ResearchGate</a>
               </li>
               <li class="flex items-center">
-                <img src="https://iconsusa.org/assets%20/icons_copy/academia-2.svg" alt="Academia.edu" class="icon light-specific">
-                <img src="https://iconsusa.org/assets%20/icons_copy/academia-1.svg" alt="Academia.edu" class="icon dark-specific hidden dark:inline">
+                <img src="https://iconsusa.org/assets%20/icons_copy/academia-2.svg" alt="Academia.edu logo" loading="lazy" class="icon light-specific">
+                <img src="https://iconsusa.org/assets%20/icons_copy/academia-1.svg" alt="Academia.edu logo" loading="lazy" class="icon dark-specific hidden dark:inline">
                 <a href="https://siena.academia.edu/JGregoryWalsh" class="hover:underline">Academia.edu</a>
               </li>
             </ul>
@@ -207,11 +207,11 @@
             <h3 class="text-lg sm:text-xl font-semibold mb-4">Academic</h3>
             <ul class="space-y-3 text-left">
               <li class="flex items-center">
-                <img src="https://iconsusa.org/assets%20/icons_copy/bu.svg" alt="Boston University Email" class="icon no-invert">
+                <img src="https://iconsusa.org/assets%20/icons_copy/bu.svg" alt="Boston University logo" loading="lazy" class="icon no-invert">
                 <a href="mailto:jgwalsh@bu.edu" class="hover:underline">Boston University Email</a>
               </li>
               <li class="flex items-center">
-                <img src="https://iconsusa.org/assets%20/icons_copy/SIENa-S.svg" alt="Siena Alumni Profile" class="icon no-invert">
+                <img src="https://iconsusa.org/assets%20/icons_copy/SIENa-S.svg" alt="Siena Alumni Profile logo" loading="lazy" class="icon no-invert">
                 <a href="https://saintsnetwork.siena.edu/profile/gregwalsh/" class="hover:underline">Siena Alumni Profile</a>
               </li>
             </ul>
@@ -263,14 +263,23 @@
       document.documentElement.classList.toggle('dark', prefersDark);
       const toggleButton = document.getElementById('dark-mode-toggle');
       if (toggleButton) {
+        toggleButton.setAttribute('aria-pressed', String(prefersDark));
         toggleButton.textContent = prefersDark ? '☀' : '☾';
         toggleButton.setAttribute('aria-label', prefersDark ? 'Toggle light mode' : 'Toggle dark mode');
+        toggleButton.addEventListener('click', () => {
+          const isDark = document.documentElement.classList.toggle('dark');
+          toggleButton.setAttribute('aria-pressed', String(isDark));
+          toggleButton.textContent = isDark ? '☀' : '☾';
+          toggleButton.setAttribute('aria-label', isDark ? 'Toggle light mode' : 'Toggle dark mode');
+        });
       }
 
       const mobileToggle = document.getElementById('mobile-menu-toggle');
       const mobileMenu = document.getElementById('mobile-menu');
+      mobileToggle?.setAttribute('aria-pressed', String(mobileToggle.getAttribute('aria-expanded') === 'true'));
       mobileToggle?.addEventListener('click', () => {
         const expanded = mobileToggle.getAttribute('aria-expanded') === 'true';
+        mobileToggle.setAttribute('aria-pressed', String(!expanded));
         mobileToggle.setAttribute('aria-expanded', String(!expanded));
         mobileMenu.classList.toggle('max-h-0');
         mobileMenu.classList.toggle('max-h-screen');
