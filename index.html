@@ -1,227 +1,299 @@
 <!DOCTYPE html>
-<html lang="en" class="light">
+<html lang="en" class="dark">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>J. Gregory Walsh - Behavioral Science & Crisis Strategy</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <style>
-        .dark {
-            background-color: #1f2937;
-            color: #e5e7eb;
-        }
-        .dark a {
-            color: #93c5fd;
-        }
-        .dark .bg-white {
-            background-color: #374151;
-        }
-        .dark .bg-gray-100 {
-            background-color: #1f2937;
-        }
-        .icon {
-            width: 20px;
-            height: 20px;
-            margin-right: 8px;
-            vertical-align: middle;
-        }
-        .dark .icon:not(.dark-specific) {
-            filter: brightness(0) invert(1);
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>J. Gregory Walsh | Behavioral Insight for Strategy, Safety & Systems</title>
+  <meta name="description" content="Clinically grounded behavioral expertise supporting mission-driven operations, public safety, and strategic roles.">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    :root { color-scheme: light dark; }
+    .dark { background-color: #1f2937; color: #ffffff; }
+    .dark a { color: #93c5fd; }
+    .dark .bg-white { background-color: #374151 !important; }
+    .dark .bg-gray-100 { background-color: #1f2937 !important; }
+    .dark .bg-gray-50 { background-color: #374151 !important; }
+
+    .icon {
+      width: 32px;
+      height: 32px;
+      margin-right: 8px;
+      vertical-align: middle;
+    }
+    .dark .icon { filter: none !important; }
+    .dark .icon.light-specific { filter: brightness(0) invert(1) !important; }
+
+    .mobile-menu { transition: max-height 0.3s ease-in-out; }
+    body { min-height: 100vh; display: flex; flex-direction: column; }
+    main { flex-grow: 1; }
+  </style>
 </head>
 <body class="font-sans bg-gray-100 text-gray-800 transition-colors duration-300">
-    <!-- Header -->
-    <header class="bg-white shadow-md sticky top-0 z-10">
-        <div class="container mx-auto px-4 py-4 flex justify-between items-center">
-            <h1 class="text-2xl font-bold">J. Gregory Walsh</h1>
-            <nav class="hidden md:flex space-x-6">
-                <a href="#mission" class="hover:text-blue-600">Mission</a>
-                <a href="#competencies" class="hover:text-blue-600">Competencies</a>
-                <a href="#experience" class="hover:text-blue-600">Experience</a>
-                <a href="#contact" class="hover:text-blue-600">Contact</a>
-                <a href="#quick-ref" class="hover:text-blue-600">Quick Ref</a>
-            </nav>
-            <button id="dark-mode-toggle" class="text-sm px-4 py-2 border rounded-lg hover:bg-gray-200">Toggle Dark Mode</button>
-        </div>
-    </header>
 
-    <!-- Hero Section -->
-    <section class="bg-white py-16 text-center">
-        <div class="container mx-auto px-4">
-            <h2 class="text-3xl font-bold mb-2">J. Gregory Walsh</h2>
-            <p class="text-lg font-semibold text-gray-600 mb-4">Behavioral Science | Crisis Strategy | Intelligence-Ready Insight</p>
-            <p class="text-lg max-w-2xl mx-auto mb-6">I translate frontline behavioral expertise into actionable insight for public safety, federal operations, and strategic private-sector teams.</p>
-            <a href="#" class="bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700">Download Résumé</a>
-        </div>
+  <!-- HEADER -->
+  <header class="bg-white shadow-md sticky top-0 z-10">
+    <div class="container mx-auto px-4 py-4 flex items-center justify-between">
+      <h1 class="text-xl sm:text-2xl font-bold">J. Gregory Walsh</h1>
+      <nav class="hidden md:flex space-x-6">
+        <a href="about.html" class="hover:text-blue-500 transition">About</a>
+        <a href="experience.html" class="hover:text-blue-500 transition">Experience</a>
+        <a href="projects.html" class="hover:text-blue-500 transition">Projects</a>
+        <a href="resume.html" class="hover:text-blue-500 transition">Résumé</a>
+        <a href="contact.html" class="hover:text-blue-500 transition">Contact</a>
+        <a href="#quick-ref" class="hover:text-blue-500 transition">Quick Ref</a>
+      </nav>
+      <div class="flex items-center space-x-4">
+        <button id="dark-mode-toggle" class="text-sm px-3 py-1 border rounded-lg hover:bg-gray-200" aria-label="Toggle dark mode">
+          Toggle Dark Mode
+        </button>
+        <button id="mobile-menu-toggle" class="md:hidden text-2xl" aria-label="Toggle mobile menu" aria-expanded="false">
+          ☰
+        </button>
+      </div>
+    </div>
+    <div id="mobile-menu" class="mobile-menu max-h-0 overflow-hidden md:hidden bg-white">
+      <ul class="flex flex-col items-center space-y-4 py-4">
+        <li><a href="about.html" class="text-lg hover:text-blue-500 transition">About</a></li>
+        <li><a href="experience.html" class="text-lg hover:text-blue-500 transition">Experience</a></li>
+        <li><a href="projects.html" class="text-lg hover:text-blue-500 transition">Projects</a></li>
+        <li><a href="resume.html" class="text-lg hover:text-blue-500 transition">Résumé</a></li>
+        <li><a href="contact.html" class="text-lg hover:text-blue-500 transition">Contact</a></li>
+        <li><a href="#quick-ref" class="text-lg hover:text-blue-500 transition">Quick Ref</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <!-- MAIN CONTENT -->
+  <main class="flex-grow">
+
+    <!-- Hero -->
+    <section class="bg-gray-100 py-16 text-center px-4">
+      <h2 class="text-2xl sm:text-3xl lg:text-4xl font-bold mb-2">J. Gregory Walsh</h2>
+      <p class="text-base sm:text-lg font-semibold text-gray-600 mb-4">Behavioral Science | Crisis Strategy | Intelligence-Ready Insight</p>
+      <p class="text-sm sm:text-base lg:text-lg max-w-2xl mx-auto mb-6">
+        I translate frontline behavioral expertise into actionable insight for public safety, federal operations, and strategic private-sector teams.
+      </p>
+      <a href="resume.html" class="inline-block bg-blue-600 text-white px-4 py-2 sm:px-6 sm:py-3 rounded-lg font-semibold shadow-md hover:shadow-lg hover:bg-blue-700">
+        Download Résumé
+      </a>
     </section>
 
-    <!-- Mission Section -->
-    <section id="mission" class="py-16 bg-gray-100">
-        <div class="container mx-auto px-4">
-            <h2 class="text-3xl font-bold text-center mb-8">Mission & Profile</h2>
-            <div class="max-w-3xl mx-auto space-y-6">
-                <p>With a robust background in mental health care, I am transitioning to a career in law enforcement, focusing on federal agencies while exploring private-sector roles. My expertise lies in understanding human behavior, managing high-stakes situations, and leveraging data-driven decisions.</p>
-                <p>My unique blend of psychological insight, crisis intervention experience, and analytical capabilities positions me to add value in dynamic, high-pressure environments.</p>
-            </div>
+    <!-- Mission & Profile -->
+    <section id="mission" class="bg-white dark:bg-gray-800 py-12 sm:py-16 px-4">
+      <div class="container mx-auto max-w-3xl text-center">
+        <h2 class="text-2xl sm:text-3xl font-bold mb-6">Mission & Profile</h2>
+        <div class="space-y-4 text-gray-700 dark:text-gray-200">
+          <p>
+            With a robust background in mental health care, I am transitioning to a career in law enforcement, focusing on federal agencies while exploring private-sector roles. My expertise lies in understanding human behavior, managing high-stakes situations, and leveraging data-driven decisions.
+          </p>
+          <p>
+            My unique blend of psychological insight, crisis intervention experience, and analytical capabilities positions me to add value in dynamic, high-pressure environments.
+          </p>
         </div>
+      </div>
     </section>
 
-    <!-- Competencies Section -->
-    <section id="competencies" class="py-16 bg-white">
-        <div class="container mx-auto px-4">
-            <h2 class="text-3xl font-bold text-center mb-8">Core Competencies</h2>
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
-                <div class="bg-gray-100 p-6 rounded-lg shadow-md">
-                    <h3 class="text-xl font-semibold mb-4">Crisis Management</h3>
-                    <p>Proven ability to de-escalate high-risk situations and manage crises under pressure.</p>
-                </div>
-                <div class="bg-gray-100 p-6 rounded-lg shadow-md">
-                    <h3 class="text-xl font-semibold mb-4">Behavioral Assessment</h3>
-                    <p>Expertise in analyzing behavior and motivations to support law enforcement objectives.</p>
-                </div>
-                <div class="bg-gray-100 p-6 rounded-lg shadow-md">
-                    <h3 class="text-xl font-semibold mb-4">Data Analysis</h3>
-                    <p>Skilled in statistical modeling and data visualization to inform strategic decisions.</p>
-                </div>
-            </div>
+    <!-- Core Competencies -->
+    <section id="competencies" class="bg-white dark:bg-gray-800 py-12 sm:py-16 px-4">
+      <div class="container mx-auto max-w-3xl text-center">
+        <h2 class="text-2xl sm:text-3xl font-bold mb-8">Core Competencies</h2>
+        <div class="grid grid-cols-1 sm:grid-cols-3 gap-6">
+          <div class="bg-gray-50 dark:bg-gray-700 p-6 rounded-lg shadow-sm">
+            <h3 class="text-lg sm:text-xl font-semibold mb-2">Crisis Management</h3>
+            <p>Proven ability to de-escalate high-risk situations and manage crises under pressure.</p>
+          </div>
+          <div class="bg-gray-50 dark:bg-gray-700 p-6 rounded-lg shadow-sm">
+            <h3 class="text-lg sm:text-xl font-semibold mb-2">Behavioral Assessment</h3>
+            <p>Expertise in analyzing behavior and motivations to support law enforcement objectives.</p>
+          </div>
+          <div class="bg-gray-50 dark:bg-gray-700 p-6 rounded-lg shadow-sm">
+            <h3 class="text-lg sm:text-xl font-semibold mb-2">Data Analysis</h3>
+            <p>Skilled in statistical modeling and data visualization to inform strategic decisions.</p>
+          </div>
         </div>
+      </div>
     </section>
 
-    <!-- Experience Section -->
-    <section id="experience" class="py-16 bg-gray-100">
-        <div class="container mx-auto px-4">
-            <h2 class="text-3xl font-bold text-center mb-8">Service & Experience</h2>
-            <div class="max-w-3xl mx-auto space-y-12">
-                <div>
-                    <h3 class="text-xl font-semibold">Mental Health Professional</h3>
-                    <p class="text-gray-600">Acute Psychiatric Care | 2015–2024</p>
-                    <ul class="list-disc pl-6 mt-2">
-                        <li>Managed crisis interventions for high-risk patients, reducing escalation incidents by 30%.</li>
-                        <li>Conducted behavioral assessments to inform treatment plans and risk management strategies.</li>
-                        <li>Led training sessions on de-escalation techniques for staff, enhancing team preparedness.</li>
-                    </ul>
-                </div>
-                <div>
-                    <h3 class="text-xl font-semibold">Data Analyst (Part-Time)</h3>
-                    <p class="text-gray-600">Healthcare Consulting | 2020–2023</p>
-                    <ul class="list-disc pl-6 mt-2">
-                        <li>Developed statistical models to predict patient outcomes, improving resource allocation.</li>
-                        <li>Created data visualizations for stakeholder presentations, driving evidence-based decisions.</li>
-                        <li>Collaborated with cross-functional teams to integrate data insights into operational strategies.</li>
-                    </ul>
-                </div>
-            </div>
+    <!-- Experience -->
+    <section id="experience" class="bg-white dark:bg-gray-800 py-12 sm:py-16 px-4">
+      <div class="container mx-auto max-w-3xl">
+        <h2 class="text-2xl sm:text-3xl font-bold text-center mb-8">Service & Experience</h2>
+        <div class="space-y-8 text-gray-700 dark:text-gray-200">
+          <div>
+            <h3 class="text-lg sm:text-xl font-semibold">Mental Health Professional</h3>
+            <p class="text-gray-600 dark:text-gray-400">Acute Psychiatric Care | 2015–2024</p>
+            <ul class="list-disc pl-6 mt-2">
+              <li>Managed crisis interventions for high-risk patients, reducing escalation incidents by 30%.</li>
+              <li>Conducted behavioral assessments to inform treatment plans and risk management strategies.</li>
+              <li>Led training sessions on de-escalation techniques for staff, enhancing team preparedness.</li>
+            </ul>
+          </div>
+          <div>
+            <h3 class="text-lg sm:text-xl font-semibold">Data Analyst (Part-Time)</h3>
+            <p class="text-gray-600 dark:text-gray-400">Healthcare Consulting | 2020–2023</p>
+            <ul class="list-disc pl-6 mt-2">
+              <li>Developed statistical models to predict patient outcomes, improving resource allocation.</li>
+              <li>Created data visualizations for stakeholder presentations, driving evidence-based decisions.</li>
+              <li>Collaborated with cross-functional teams to integrate data insights into operational strategies.</li>
+            </ul>
+          </div>
         </div>
+      </div>
     </section>
 
-    <!-- Contact Section -->
-    <section id="contact" class="py-16 bg-white">
-        <div class="container mx-auto px-4">
-            <h2 class="text-3xl font-bold text-center mb-8">Connect</h2>
-            <div class="max-w-3xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8">
-                <div>
-                    <h3 class="text-xl font-semibold mb-4">Contact Information</h3>
-                    <p>Email: <a href="mailto:jgwalsh@example.com" class="text-blue-600 hover:underline">jgwalsh@example.com</a></p>
-                    <p>Phone: <a href="tel:+16173833745" class="text-blue-600 hover:underline">(617) 383-3745</a></p>
-                </div>
-                <div>
-                    <h3 class="text-xl font-semibold mb-4">Contact Form</h3>
-                    <div>
-                        <label for="name" class="block text-lg mb-2">Name</label>
-                        <input type="text" id="name" class="w-full p-3 border rounded-lg mb-4" placeholder="Your Name">
-                    </div>
-                    <div>
-                        <label for="email" class="block text-lg mb-2">Email</label>
-                        <input type="email" id="email" class="w-full p-3 border rounded-lg mb-4" placeholder="Your Email">
-                    </div>
-                    <div>
-                        <label for="message" class="block text-lg mb-2">Message</label>
-                        <textarea id="message" class="w-full p-3 border rounded-lg mb-4" rows="5" placeholder="Your Message"></textarea>
-                    </div>
-                    <button onclick="submitForm()" class="bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700">Send Message</button>
-                </div>
-            </div>
+    <!-- Connect -->
+    <section id="connect" class="bg-white dark:bg-gray-800 py-12 sm:py-16 px-4">
+      <div class="container mx-auto max-w-3xl grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div>
+          <h3 class="text-lg sm:text-xl font-semibold mb-4">Contact Information</h3>
+          <p>Email: <a href="mailto:jgwalsh@proton.me" class="text-blue-600 hover:underline">jgwalsh@proton.me</a></p>
+          <p>Phone: <a href="tel:+16173833745" class="text-blue-600 hover:underline">(617) 383-3745</a></p>
         </div>
+        <div>
+          <h3 class="text-lg sm:text-xl font-semibold mb-4">Contact Form</h3>
+          <form onsubmit="event.preventDefault(); submitForm();" class="space-y-4">
+            <div>
+              <label for="name" class="block mb-1">Name</label>
+              <input id="name" type="text" class="w-full p-3 border rounded-lg" placeholder="Your Name">
+            </div>
+            <div>
+              <label for="email" class="block mb-1">Email</label>
+              <input id="email" type="email" class="w-full p-3 border rounded-lg" placeholder="Your Email">
+            </div>
+            <div>
+              <label for="message" class="block mb-1">Message</label>
+              <textarea id="message" rows="5" class="w-full p-3 border rounded-lg" placeholder="Your Message"></textarea>
+            </div>
+            <button type="submit" class="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700">
+              Send Message
+            </button>
+          </form>
+        </div>
+      </div>
     </section>
 
-    <!-- Quick Reference Section -->
-    <section id="quick-ref" class="py-16 bg-gray-100">
-        <div class="container mx-auto px-4">
-            <h2 class="text-3xl font-bold text-center mb-8">Quick Reference</h2>
-            <div class="max-w-3xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8">
-                <div>
-                    <h3 class="text-xl font-semibold mb-4">Professional Profiles</h3>
-                    <ul class="space-y-2">
-                        <li><img src="https://iconsusa.org/assets%20/icons_copy/linkedin.svg" alt="LinkedIn" class="icon"><a href="https://www.linkedin.com/in/jgregorywalsh" class="text-blue-600 hover:underline">LinkedIn</a></li>
-                        <li><img src="https://iconsusa.org/assets%20/icons_copy/github.svg" alt="GitHub" class="icon"><a href="https://github.com/jgwalsh02134" class="text-blue-600 hover:underline">GitHub</a></li>
-                        <li><img src="https://iconsusa.org/assets%20/icons_copy/protonmail.svg" alt="ProtonMail" class="icon"><a href="#" class="text-blue-600 hover:underline">ProtonMail</a></li>
-                        <li><img src="https://iconsusa.org/assets%20/icons_copy/facebook.svg" alt="Facebook" class="icon"><a href="https://www.facebook.com/jgregwalsh" class="text-blue-600 hover:underline">Facebook</a></li>
-                        <li><img src="https://iconsusa.org/assets%20/icons_copy/icons8-usa.svg" alt="USAJobs.gov" class="icon"><a href="https://www.usajobs.gov/applicant/profile/" class="text-blue-600 hover:underline">USAJobs.gov</a></li>
-                    </ul>
-                </div>
-                <div>
-                    <h3 class="text-xl font-semibold mb-4">Academic & Institutional</h3>
-                    <ul class="space-y-2">
-                        <li>
-                            <img src="https://iconsusa.org/assets%20/icons_copy/researchgate.svg" alt="ResearchGate" class="icon light-specific">
-                            <img src="https://iconsusa.org/assets%20/icons_copy/researchgate-w.svg" alt="ResearchGate" class="icon dark-specific hidden dark:inline">
-                            <a href="https://www.researchgate.net/profile/Jg_Walsh" class="text-blue-600 hover:underline">ResearchGate</a>
-                        </li>
-                        <li><img src="https://iconsusa.org/assets%20/icons_copy/orcid.svg" alt="ORCID" class="icon"><a href="https://orcid.org/0000-0002-4420-5724" class="text-blue-600 hover:underline">ORCID</a></li>
-                        <li><img src="https://iconsusa.org/assets%20/icons_copy/academia-1.svg" alt="Academia.edu" class="icon"><a href="https://siena.academia.edu/JGregoryWalsh" class="text-blue-600 hover:underline">Academia.edu</a></li>
-                        <li><img src="https://iconsusa.org/assets%20/icons_copy/bu.svg" alt="Boston University Email" class="icon"><a href="mailto:jgwalsh@bu.edu" class="text-blue-600 hover:underline">Boston University Email</a></li>
-                        <li><img src="https://iconsusa.org/assets%20/icons_copy/SIENa-S.svg" alt="Siena Alumni Profile" class="icon"><a href="https://saintsnetwork.siena.edu/profile/gregwalsh/" class="text-blue-600 hover:underline">Siena Alumni Profile</a></li>
-                    </ul>
-                </div>
-            </div>
+    <!-- Quick Reference -->
+    <section id="quick-ref" class="bg-white dark:bg-gray-800 py-12 sm:py-16 px-4">
+      <div class="container mx-auto max-w-3xl text-center">
+        <h2 class="text-2xl sm:text-3xl font-bold mb-8">Quick Reference</h2>
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-8">
+          <!-- Professional Profiles -->
+          <div>
+            <h3 class="text-lg sm:text-xl font-semibold mb-4">Professional Profiles</h3>
+            <ul class="space-y-3 text-left">
+              <li class="flex items-center">
+                <img src="https://iconsusa.org/assets%20/icons_copy/linkedin.svg" alt="LinkedIn" class="icon no-invert">
+                <a href="https://www.linkedin.com/in/jgregorywalsh" class="hover:underline">LinkedIn</a>
+              </li>
+              <li class="flex items-center">
+                <img src="assets/icons/github.svg" alt="GitHub (light)" class="icon light-specific">
+                <img src="assets/icons/github copy.svg" alt="GitHub (dark)" class="icon dark-specific hidden dark:inline">
+                <a href="https://github.com/jgwalsh02134" class="hover:underline">GitHub</a>
+              </li>
+              <li class="flex items-center">
+                <img src="https://iconsusa.org/assets%20/icons_copy/protonmail.svg" alt="ProtonMail" class="icon no-invert">
+                <a href="mailto:jgwalsh@proton.me" class="hover:underline">ProtonMail</a>
+              </li>
+              <li class="flex items-center">
+                <img src="https://iconsusa.org/assets%20/icons_copy/facebook.svg" alt="Facebook" class="icon">
+                <a href="https://www.facebook.com/jgregorywalsh" class="hover:underline">Facebook</a>
+              </li>
+              <li class="flex items-center">
+                <img src="https://iconsusa.org/assets%20/icons_copy/icons8-usa.svg" alt="USAJobs.gov" class="icon no-invert">
+                <a href="https://www.usajobs.gov/applicant/profile/" class="hover:underline">USAJobs.gov</a>
+              </li>
+            </ul>
+          </div>
+          <!-- Academic & Institutional -->
+          <div>
+            <h3 class="text-lg sm:text-xl font-semibold mb-4">Academic & Institutional</h3>
+            <ul class="space-y-3 text-left">
+              <li class="flex items-center">
+                <img src="assets/icons/researchgate.svg" alt="ResearchGate (light)" class="icon light-specific">
+                <img src="assets/icons/researchgate-w.svg" alt="ResearchGate (dark)" class="icon dark-specific hidden dark:inline">
+                <a href="https://www.researchgate.net/profile/Jg_Walsh" class="hover:underline">ResearchGate</a>
+              </li>
+              <li class="flex items-center">
+                <img src="assets/icons/orcid.svg" alt="ORCID" class="icon">
+                <a href="https://orcid.org/0000-0002-4420-5724" class="hover:underline">ORCID</a>
+              </li>
+              <li class="flex items-center">
+                <img src="assets/icons/icons8-academia.edu.svg" alt="Academia.edu (light)" class="icon light-specific">
+                <img src="assets/icons/academia.svg" alt="Academia.edu (dark)" class="icon dark-specific hidden dark:inline">
+                <a href="https://siena.academia.edu/JGregoryWalsh" class="hover:underline">Academia.edu</a>
+              </li>
+              <li class="flex items-center">
+                <img src="assets/icons/bu.svg" alt="Boston University Email" class="icon no-invert">
+                <a href="mailto:jgwalsh@bu.edu" class="hover:underline">Boston University Email</a>
+              </li>
+              <li class="flex items-center">
+                <img src="assets/icons/SIENa-S.svg" alt="Siena Alumni Profile" class="icon no-invert">
+                <a href="https://saintsnetwork.siena.edu/profile/gregwalsh/" class="hover:underline">Siena Alumni Profile</a>
+              </li>
+            </ul>
+          </div>
         </div>
+      </div>
     </section>
 
-    <!-- Footer -->
-    <footer class="bg-white py-6">
-        <div class="container mx-auto px-4 text-center">
-            <div class="mb-4">
-                <h3 class="text-lg font-semibold mb-2">Links</h3>
-                <ul class="flex justify-center space-x-4">
-                    <li><a href="#mission" class="text-blue-600 hover:underline">Mission & Profile</a></li>
-                    <li><a href="#competencies" class="text-blue-600 hover:underline">Core Competencies</a></li>
-                    <li><a href="#experience" class="text-blue-600 hover:underline">Service & Experience</a></li>
-                    <li><a href="#contact" class="text-blue-600 hover:underline">Connect</a></li>
-                    <li><a href="#quick-ref" class="text-blue-600 hover:underline">Quick Reference</a></li>
-                </ul>
-            </div>
-            <div class="mb-4">
-                <h3 class="text-lg font-semibold mb-2">Contact</h3>
-                <p><a href="mailto:jgwalsh@example.com" class="text-blue-600 hover:underline">jgwalsh@example.com</a></p>
-                <p><a href="tel:+16173833745" class="text-blue-600 hover:underline">(617) 383-3745</a></p>
-            </div>
-            <p>© 2025 J. Gregory Walsh. All rights reserved. Built with Tailwind CSS. Deployed via Cloudflare Pages.</p>
-        </div>
-    </footer>
+  </main>
 
-    <script>
-        // Contact Form Submission
-        function submitForm() {
-            const name = document.getElementById('name').value;
-            const email = document.getElementById('email').value;
-            const message = document.getElementById('message').value;
-            if (name && email && message) {
-                alert('Thank you for your message! We will get back to you soon.');
-                document.getElementById('name').value = '';
-                document.getElementById('email').value = '';
-                document.getElementById('message').value = '';
-            } else {
-                alert('Please fill out all fields.');
-            }
-        }
+  <!-- FOOTER -->
+  <footer class="bg-gray-50 dark:bg-gray-800 py-6 px-4">
+    <div class="container mx-auto max-w-3xl text-center space-y-4">
+      <div>
+        <h3 class="font-semibold">Navigation</h3>
+        <ul class="flex flex-wrap justify-center gap-3 text-sm">
+          <li><a href="#mission" class="hover:underline">Mission & Profile</a></li>
+          <li><a href="#competencies" class="hover:underline">Core Competencies</a></li>
+          <li><a href="#experience" class="hover:underline">Service & Experience</a></li>
+          <li><a href="#connect" class="hover:underline">Connect</a></li>
+          <li><a href="#quick-ref" class="hover:underline">Quick Reference</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3 class="font-semibold">Contact</h3>
+        <p><a href="mailto:jgwalsh@proton.me" class="hover:underline">jgwalsh@proton.me</a></p>
+        <p><a href="tel:+16173833745" class="hover:underline">(617) 383-3745</a></p>
+      </div>
+      <p class="text-sm">© 2025 J. Gregory Walsh. All rights reserved.</p>
+    </div>
+  </footer>
 
-        // Dark Mode Toggle
-        const toggleButton = document.getElementById('dark-mode-toggle');
-        toggleButton.addEventListener('click', () => {
-            document.documentElement.classList.toggle('dark');
-            toggleButton.textContent = document.documentElement.classList.contains('dark') ? 'Toggle Light Mode' : 'Toggle Dark Mode';
-        });
-    </script>
+  <script>
+    function submitForm() {
+      const name = document.getElementById('name').value.trim();
+      const email = document.getElementById('email').value.trim();
+      const message = document.getElementById('message').value.trim();
+      if (name && email && message) {
+        alert('Thank you for your message! We will get back to you soon.');
+        document.getElementById('name').value = '';
+        document.getElementById('email').value = '';
+        document.getElementById('message').value = '';
+      } else {
+        alert('Please fill out all fields.');
+      }
+    }
+
+    (function() {
+      const toggleButton = document.getElementById('dark-mode-toggle');
+      toggleButton?.addEventListener('click', () => {
+        document.documentElement.classList.toggle('dark');
+        const isDark = document.documentElement.classList.contains('dark');
+        toggleButton.textContent = isDark ? 'Toggle Light Mode' : 'Toggle Dark Mode';
+        toggleButton.setAttribute('aria-label', isDark ? 'Toggle light mode' : 'Toggle dark mode');
+      });
+
+      const mobileToggle = document.getElementById('mobile-menu-toggle');
+      const mobileMenu   = document.getElementById('mobile-menu');
+      mobileToggle?.addEventListener('click', () => {
+        const expanded = mobileToggle.getAttribute('aria-expanded') === 'true';
+        mobileToggle.setAttribute('aria-expanded', String(!expanded));
+        mobileMenu.classList.toggle('max-h-0');
+        mobileMenu.classList.toggle('max-h-screen');
+        mobileToggle.textContent = expanded ? '☰' : '✕';
+      });
+    })();
+  </script>
 </body>
 </html>
