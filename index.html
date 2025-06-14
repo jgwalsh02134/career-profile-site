@@ -1,10 +1,19 @@
 <!DOCTYPE html>
-<html lang="en" class="dark">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>J. Gregory Walsh | Behavioral Insight for Strategy, Safety & Systems</title>
   <meta name="description" content="Clinically grounded behavioral expertise supporting mission-driven operations, public safety, and strategic roles.">
+
+  <!-- Initialize theme based on saved preference or system setting -->
+  <script>
+    if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+      document.documentElement.classList.add('dark');
+    } else {
+      document.documentElement.classList.remove('dark');
+    }
+  </script>
 
   <!-- Tailwind with class-based dark mode -->
   <script>
@@ -301,6 +310,11 @@
     btn.addEventListener('click', () => {
       const isDark = document.documentElement.classList.toggle('dark');
       icon.textContent = isDark ? '☀︎' : '☾';
+      if (isDark) {
+        localStorage.setItem('theme', 'dark');
+      } else {
+        localStorage.setItem('theme', 'light');
+      }
     });
 
     // Mobile menu toggle logic
