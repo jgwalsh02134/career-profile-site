@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" class="dark">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -256,13 +256,14 @@
     }
 
     (function() {
+      // Set initial theme based on system preference
+      const prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+      document.documentElement.classList.toggle('dark', prefersDark);
       const toggleButton = document.getElementById('dark-mode-toggle');
-      toggleButton?.addEventListener('click', () => {
-        document.documentElement.classList.toggle('dark');
-        const isDark = document.documentElement.classList.contains('dark');
-        toggleButton.textContent = isDark ? '☀' : '☾';
-        toggleButton.setAttribute('aria-label', isDark ? 'Toggle light mode' : 'Toggle dark mode');
-      });
+      if (toggleButton) {
+        toggleButton.textContent = prefersDark ? '☀' : '☾';
+        toggleButton.setAttribute('aria-label', prefersDark ? 'Toggle light mode' : 'Toggle dark mode');
+      }
 
       const mobileToggle = document.getElementById('mobile-menu-toggle');
       const mobileMenu = document.getElementById('mobile-menu');
